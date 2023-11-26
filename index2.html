@@ -26,11 +26,33 @@
             text-align: center;
             position: relative;
         }
+        
+        /* Estilos para el contenedor del personaje */
+        #personaje {
+            width: 1000px; /* Ajusta el tamaño del personaje según sea necesario */
+            height: 1000px;
+            background-image: url('personaje-ojos-abiertos.png'); /* Imagen inicial con los ojos abiertos */
+            background-size: cover;
+            animation: pestañeo 4s infinite; /* Inicia la animación de pestañeo */
+        }
+
+        /* Definición de la animación de pestañeo */
+        @keyframes pestañeo {
+            0%, 100% {
+                background-image: url('personaje-ojos-abiertos.png'); /* Imagen con los ojos abiertos al inicio y al final */
+            }
+            50% {
+                background-image: url('personaje-ojos-cerrados.png'); /* Imagen con los ojos cerrados a la mitad de la animación */
+            }
+        }
+
     </style>
 </head>
 <body>
 Hello world, esta es la sección 2 de Dusan lol
 <div id="contenedor">
+    <div id="personaje"></div>
+
     <div id="alicia">
         <!-- Contenido relacionado con Alicia en el País de las Maravillas -->
     </div>
@@ -39,6 +61,9 @@ Hello world, esta es la sección 2 de Dusan lol
         <!-- Contenido del encabezado si es necesario -->
     </header>
 </div>
+
+
+
 
 <footer>
     <!-- Botones en el footer -->
