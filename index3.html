@@ -4,19 +4,33 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Alicia Interactivo</title>
+
+    <!-- Fuente -->
+    <link href='https://fonts.googleapis.com/css?family=Alice' rel='stylesheet'>
+
     <style>
         /* Estilos para el cuerpo del documento */
-        body {
+        html, body {
+            width: 100%;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            margin: 0;
+            margin: 0; 
         }
 
         /* Estilos para el contenedor */
         #contenedor {
+            scroll-behavior: smooth;
             flex: 1;
             position: relative;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+        }
+
+        /* Aplica la fuente 'Alice' a elementos específicos */
+        h1, h2, p {
+            font-family: 'Alice', sans-serif;
         }
 
         /* Estilos para el footer */
@@ -29,8 +43,8 @@
         
         /* Estilos para el contenedor del personaje */
         #personaje {
-            width: 1000px; /* Ajusta el tamaño del personaje según sea necesario */
-            height: 1000px;
+            width: 600px; /* Ajusta el tamaño del personaje según sea necesario */
+            height: 600px;
             background-image: url('img/img-3/personaje-ojos-abiertos.png'); /* Imagen inicial con los ojos abiertos */
             background-size: contain;
             background-repeat: no-repeat;
@@ -47,17 +61,64 @@
             }
         }
 
+        .slides{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            color: white;
+            scroll-snap-align: start;
+        }
+
+        .slides img{
+            width: 350px;
+        }
+
+        .slides h2{
+            font-size: 70px;
+            font-weight: 600px;
+            max-width: 650px;
+        }
+
+        .slide1{
+            background: linear-gradient(454deg, #020024, #00d4ff);
+        }
+
+        .slide2{
+            background: linear-gradient(454deg, #cf1cdb, #ff003d);
+        }
+
+        .slide3{
+            background: linear-gradient(454deg, #d0db1c, #00ff99);
+        }
+
+
     </style>
 </head>
 <body>
-Hello world, esta es la sección 2 de Dusan lol
 <div id="contenedor">
-    
-    <div id="personaje"></div>
+
+    <div class="slides slide1">
+        <div id="personaje"></div>
+        <h2>Ejemplo  uno jeje</h2>
+    </div>
+
+    <div class="slides slide2">
+        <img src="img/img-3/dos.png">
+        <h2>Ejemplo dos lols</h2>
+    </div>
+
+    <div class="slides slide3">
+        <img src="img/img-3/tres.png">
+        <h2>Ejemplo tres lilili</h2>
+    </div>
 
     <header>
         <!-- Contenido del encabezado si es necesario -->
     </header>
+
 </div>
 
 
