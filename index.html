@@ -13,13 +13,13 @@
         /* Estilos texto */
         h1, h2, p, body, header {
             font-family: 'Alice';
-            margin: 0px;}
+            margin: 0px;
         }
+        
 
         h1{
             font-size: 60px;
         }
-
 
 
         /* Estilos para el cuerpo del documento */
@@ -29,6 +29,7 @@
             display: flex;
             flex-direction: column;
             margin: 0;
+            background-color: #ffb5d3;
         }
 
         /* Estilos para el contenedor */
@@ -36,6 +37,7 @@
             position: relative;
             overflow-y: scroll;
             scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
         }
 
         /* Estilos para los recuadros de la escena */
@@ -50,26 +52,30 @@
         }
 
         .recuadro1 {
-            background: linear-gradient(0deg, #7068C6, #F0CCEF);
+            background: linear-gradient(0deg, #7c28cb, #ffb5d3);
             flex-direction: column;
         }
         .recuadro1 p{
             margin-top: 30px;
+            position: relative;
             flex-direction: column;
         }
 
         .recuadro2 {
-            background: linear-gradient(0deg, #91D198, #7068C6);
+            background: linear-gradient(0deg, #ffb5d3, #87dbfc, #87dbfc, #7c28cb);
+            position: relative; 
             flex-direction: column;
         }
 
         .recuadro3 {
-            background: linear-gradient(0deg, #91D198, #B5DBEF, #91D198);
+            background: linear-gradient(0deg, #7c28cb, #87dbfc, #87dbfc, #ffb5d3);
+            position: relative;
             flex-direction: column;
         }
 
         .recuadro4 {
-            background: linear-gradient(0deg, #91D198, #B5DBEF, #91D198);
+            background: linear-gradient(0deg, #87dbfc, #87dbfc, #87dbfc, #7c28cb);
+            position: relative;
             flex-direction: column;
         }
 
@@ -77,8 +83,6 @@
             margin-top:;
         }
 
-
-        /* Estilos para elementos de fondo / entidades */
 
 
         /* Estilos para las animaciones */
@@ -91,26 +95,62 @@
             }
 
         .animacion-alicia-caminata{
-        width: 150px;
-        height: 600px;
-        background-image: url(img/animacion-alicia-3.png);
-        background-repeat: no-repeat;
-        background-size: 450px;
-        animation: w1Effect 1s steps(3) infinite, animate 10s infinite;
+          position: absolute;
+          z-index: 10;
+          width: 150px;
+          height: 600px;
+          background-image: url(img/index1/animacion-alicia-3.png);
+          background-repeat: no-repeat;
+          background-size: 450px;
+          animation: caminata 1s steps(3) infinite, avanzarcaminando 10s infinite;
         }
 
         .animacion-conejo-caminata{
-        width: 150px;
-        height: 600px;
-        background-image: url(img/animacion-conejo-2.png);
-        background-repeat: no-repeat;
-        background-size: 450px;
-        animation: w1Effect 1s steps(3) infinite, animate 10s  infinite;
+            position: absolute;
+            z-index: 10;
+            width: 150px;
+            height: 600px;
+            margin-left: 200px;
+            background-image: url(img/index1/animacion-conejo-2.png);
+            background-repeat: no-repeat;
+            background-size: 450px;
+            animation: caminata 1s steps(3) infinite, avanzarcaminando 10s  infinite;
+        }
+
+        .animacion-conejo-salto {
+            position: absolute;
+            z-index: 10;
+            width: 150px;
+            height: 600px;
+            margin-top: 180px;
+            background-image: url(img/index1/animacion-conejo-1.png);
+            background-repeat: no-repeat;
+            background-size: 450px;
+            animation: salto 3s steps(3) infinite, saltoconejo 3s infinite;
+        }
+
+        .animacion-alicia-mirando {
+            position: absolute;
+            z-index: 5;
+            width: 100%;
+            height: 100%;
+            background-image: url(img/index1/recuadro2-alicia-1.png);
+            animation: mirar 3s infinite;
         }
 
         /* Animación cambio de frames */
 
-        @keyframes w1Effect{
+        @keyframes mirar{
+            0%{
+                background-image: url('img/index1/recuadro2-alicia-1.png');
+            }
+            100%{
+                background-image: url('img/index1/recuadro2-alicia-2.png');
+            }
+        }
+
+
+        @keyframes caminata{
             from{
                 background-position: 0px;
             }to{
@@ -118,23 +158,158 @@
             }
         }
 
-        @keyframes animate{
+        @keyframes salto{
+            from{
+                background-position: 0px;
+            }to{
+                background-position: -409px;
+            }
+        }
+
+        @keyframes avanzarcaminando{
             0%{
                 transform:translateX(0px);
             }
             100%{
-                transform:translateX(1100px);
+                transform:translateX(900px);
             }
         }
 
-        /* Estilos para el header y el footer */
+        @keyframes conejoasomandose{
+            0%{
+                transform:translateX(0px);
+            }
+            100%{
+                transform:translateX(-40px);
+            }
+            0%{
+                transform:translateY(0px);
+            }
+            100%{
+                transform:translateY(-40px);
+            }
+        }
+
+            @keyframes saltoconejo {
+            0% {
+                transform: translateY(0px);
+                }
+            30% {
+                transform: translateY(-100px);
+                }
+            100% {
+                transform: translateY(200px);
+            }
+            0%{
+                transform:translateX(0px);
+            }
+            100%{
+                transform:translateX(80px);
+            }
+            }
+
+        /* Estilos para el footer */
 
         footer {
-            background-color: whitesmoke;
+            background-color: #7c28cb;
             padding: 20px;
             text-align: center;
             position: relative;
         }
+
+        footer a {
+            color: #ffb5d3; 
+            }
+
+        /* Estilos imagenes composicion recuadros */
+
+        .recuadro2-capa1{ 
+        position: absolute; 
+        z-index: 2; 
+        width: 100%;
+        height: 100%;
+        top: 0; 
+        left: 0; 
+        } 
+
+
+        .recuadro2-conejo{ 
+        position: absolute; 
+        z-index: 3; 
+        width: 100%;
+        height: 100%;
+        top: 0; 
+        left: 0;
+        animation: conejoasomandose 10s infinite;
+        } 
+
+        .recuadro2-capa2{ 
+        position: absolute; 
+        z-index: 4; 
+        width: 100%;
+        height: 100%;
+        top: 0; 
+        left: 0; 
+        } 
+
+        .recuadro2-alicia-1{ 
+        position: absolute; 
+        z-index: 5; 
+        width: 100%;
+        height: 100%;
+        top: 0; 
+        left: 0; 
+        } 
+
+        .recuadro2-capa3{ 
+        position: absolute; 
+        z-index: 5; 
+        width: 100%;
+        height: 100%;
+        top: 0; 
+        left: 0; 
+        } 
+
+        .recuadro4-capa1{ 
+        position: absolute; 
+        z-index: 1; 
+        width: 100%;
+        height: 100%;
+        top: 0; 
+        left: 0; 
+        } 
+
+        .recuadro4-capa2{ 
+        position: absolute; 
+        z-index: 2; 
+        width: 100%;
+        height: 100%;
+        top: 0; 
+        left: 0; 
+        } 
+
+        .gradientedivisor {
+        position: absolute;
+        z-index: 7;
+        margin-top: 630px;
+        background: linear-gradient(rgba(255,0,0,0), rgba(255, 181, 211, 100) 80%, rgba(255,0,0,0));
+        width: 100%;
+        height: 200px;
+        }
+
+        /* Estilos continuacion para ir al siguiente capitulo */
+
+        .continuacion {
+        position: absolute;
+        font-size: 30px;
+        z-index: 8;
+        bottom: 40px; 
+        right: 40px;  
+        text-align: right;
+
+        }
+
+
 
     </style>
 
@@ -153,36 +328,49 @@
 
         <!-- Contenido de los frames correspondientes a la escena 1-->
         <div class="recuadros recuadro2">
-            <h2>Espacio para la primera escena</h2>
-            <p>Contenido: Alicia lee el libro, se asoma un conejito, fondo estático de bosque y arbustos en otra capa.</p>
+                <img src="img/index1/recuadro2-alicia-1.png"class="recuadro2-alicia-1">
+                <img src="img/index1/recuadro2-capa1.png"class="recuadro2-capa1">
+                <img src="img/index1/recuadro2-conejo.png"class="recuadro2-conejo">
+                <img src="img/index1/recuadro2-capa2.png"class="recuadro2-capa2">
+                <img src="img/index1/recuadro2-capa3.png"class="recuadro2-capa3">
+                <div class="gradientedivisor"></div>
         </div>
 
         <div class="recuadros recuadro3">
-            <h2>Espacio para la segunda escena</h2>
-            <p>Contenido: Alicia levanta la mirada, el conejo sale, fondo estático de bosque y arbustos en otra capa.</p>
+                <div class="animacion-alicia-mirando"></div>
+                <div class="animacion-conejo-salto"></div>
+                <img src="img/index1/recuadro2-capa1.png"class="recuadro2-capa1">
+                <img src="img/index1/recuadro2-capa2.png"class="recuadro2-capa2">
+                <img src="img/index1/recuadro2-alicia.png"class="recuadro2-alicia">
+                <img src="img/index1/recuadro2-capa3.png"class="recuadro2-capa3">
+                <div class="gradientedivisor"></div>
+            ¡
+        </div>
+    <div class="recuadros recuadro4">
+        <img src="img/index1/recuadro4-capa1.png" class="recuadro4-capa1">
+        <img src="img/index1/recuadro4-capa2.png" class="recuadro4-capa2">
+        <div class="recuadro-animacion">
+        <div class="animacion-alicia-caminata"></div>
+        <div class="animacion-conejo-caminata"></div>
+        </div>
+        <div class="gradientedivisor"></div>
+
+        <div class="continuacion"><a href="index2.html">Sigue al conejo...</a></div>
         </div>
 
-        <div class="recuadros recuadro4">
-            <h2>Espacio para la tercera escena</h2>
-            <p>Contenido: Fondo stático, árboles en distintas capas, animación de alicia y el conejo caminando.</p>
-            <p>Nota: Según el story esta escena debe estar en otra página pero tengo la duda de si debería hacer otro index para llegar a esta con un hipervínculo o:</p>
 
-            <div class="recuadro-animacion">
-                <div class="animacion-alicia-caminata"></div>
-                <div class="animacion-conejo-caminata"></div>
-            </div>
-
-        </div>
 
          </div> <!-- Cierre contenido de los frames-->
 
     <footer>
         <!-- Botones en el footer -->
-        <a href="index.html">Sección 1</a>
-        <a href="index2.html">Sección 2</a>
-        <a href="index3.html">Sección 3</a>
-        <a href="index4.html">Sección 4</a>
+        <a href="index.html">Capítulo 1</a>
+        <a href="index2.html">Capítulo 2</a>
+        <a href="index3.html">Capítulo 3</a>
+        <a href="index4.html">Capítulo 4</a>
     </footer>
+    </div> 
+
 
 <!-- Scripts, enlaces a librerías JS, etc. -->
 
