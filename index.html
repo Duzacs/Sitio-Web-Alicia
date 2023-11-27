@@ -32,6 +32,10 @@
             background-color: #ffb5d3;
         }
 
+        a {
+            color: #7c28cb; 
+            }
+
         /* Estilos para el contenedor */
         #contenedor {
             position: relative;
@@ -52,14 +56,24 @@
         }
 
         .recuadro1 {
-            background: linear-gradient(0deg, #7c28cb, #ffb5d3);
+            background: linear-gradient(0deg, #7c28cb 20%, #ffb5d3);
+            text-align: center;
+            display: flex;
             flex-direction: column;
-        }
-        .recuadro1 p{
-            margin-top: 30px;
             position: relative;
-            flex-direction: column;
         }
+
+        .recuadro1 .creditos {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            }
+
+        .recuadro1 p, .recuadro1 h1, .recuadro1 h2 {
+            margin-bottom: 10px; 
+            width: 1200px;
+            }
 
         .recuadro2 {
             background: linear-gradient(0deg, #ffb5d3, #87dbfc, #87dbfc, #7c28cb);
@@ -211,17 +225,38 @@
         /* Estilos para el footer */
 
         footer {
-            background-color: #7c28cb;
-            padding: 20px;
+            padding: 19px;
             text-align: center;
-            position: relative;
+            position: absolute;
+            bottom: 0;
+            display:flex;
+            z-index: 20;
         }
 
         footer a {
-            color: #ffb5d3; 
+            color: #7c28cb; 
+             margin: 0 10px;
             }
 
         /* Estilos imagenes composicion recuadros */
+
+       .bg-1{ 
+        position: absolute; 
+        z-index: 0; 
+        width: 100%;
+        height: 100%;
+        top: 0; 
+        left: 0; 
+        } 
+
+        .bg-2{ 
+        position: absolute; 
+        z-index: 1; 
+        width: 100%;
+        height: 100%;
+        top: 0; 
+        left: 0; 
+        } 
 
         .recuadro2-capa1{ 
         position: absolute; 
@@ -321,9 +356,15 @@
 
         <!-- Primera vista de la página, título y nombres-->
         <div class="recuadros recuadro1">
+            <img src="img/index1/bg-2.png"class="bg-2">
+            <img src="img/index1/bg-1.png"class="bg-1">
+
+                <div class="creditos">
             <h1>Alicia en el país de las maravillas</h1>
             <h2>✧ Una novela gráfica ✧</h2>
-            <p>Dominique Beriestain | Nayarit Betancourt | Daniela Brito | Fernanda Caniullan | Emil Gatica | Dusan Ivelic</p>
+            <p>Dominique Beriestain | Nayarit Betancourt | Daniela Brito</p>
+            <p>Fernanda Caniullan | Emil Gatica | Dusan Ivelic</p>
+                </div>
         </div>
 
         <!-- Contenido de los frames correspondientes a la escena 1-->
@@ -356,20 +397,22 @@
         <div class="gradientedivisor"></div>
 
         <div class="continuacion"><a href="index2.html">Sigue al conejo...</a></div>
-        </div>
 
-
-
-         </div> <!-- Cierre contenido de los frames-->
-
-    <footer>
+            <footer>
         <!-- Botones en el footer -->
         <a href="index.html">Capítulo 1</a>
         <a href="index2.html">Capítulo 2</a>
         <a href="index3.html">Capítulo 3</a>
         <a href="index4.html">Capítulo 4</a>
     </footer>
-    </div> 
+
+        </div>
+
+
+
+         </div> <!-- Cierre contenido de los frames-->
+         </div> 
+
 
 
 <!-- Scripts, enlaces a librerías JS, etc. -->
