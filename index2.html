@@ -77,13 +77,18 @@
             background: linear-gradient(0deg, #91D198, #B5DBEF, #91D198);
             flex-direction: column;
             background-image: url(img/index2/fondos-arboles.png);
+            background-size: contain;
+            background-repeat: no-repeat;
             /*background-image: url(img/index2/fondos-alicia.png); no se si dejarlo en capas*/
         }
+      
 
         .recuadro4 {
             background: linear-gradient(0deg, #91D198, #B5DBEF, #91D198);
             flex-direction: column;
             background-image:url(img/index2/fondos-tunel.png)
+            background-size: contain;
+            background-repeat: no-repeat;
         }
 
 
@@ -104,6 +109,7 @@
         height: 600px;
         background-image: url(img/index2/animacion-alicia-1.png);
         background-size: cover;
+        background-repeat: no-repeat;
         animation: pesta 1s infinite;
         }
 
@@ -112,7 +118,9 @@
         height: 600px;
         background-image: url(img/index2/animacion-caida.png);
         background-size: cover;
-        animation: caida 1s infinite;
+        background-repeat: no-repeat;
+        animation: caida 2s infinite;
+
         }
 
 
@@ -144,6 +152,29 @@
                  background-position-y: 300px;
             }
         }
+
+        .lineup{
+              animation: 2s anim-lineUp ease-out infinite;
+              animation-iteration-count: 1;
+
+        }
+        @keyframes anim-lineUp {
+        0% {
+         opacity: 0;
+        transform: translateY(80%);
+         }
+        20% {
+         opacity: 0;
+        }
+         50% {
+         opacity: 1;
+        transform: translateY(0%);
+        }
+        100% {
+      opacity: 1;
+        transform: translateY(0%);
+            }
+        }
         /* Estilos para el header y el footer */
 
         footer {
@@ -163,8 +194,10 @@
 
         <!-- Primera escena, alicia-->
         <div class="recuadros recuadro1">
-            <h1>Que hago</h1>
+            <div class="lineup">
+            <h1>¿Qué hago?</h1>
             <p>Scroll para ir al agujero</p>
+            </div>
             <!-- animacion pesta;eo-->
             <div class="recuadro-animacion">
                 <div class="animacion-alicia-pesta"></div>
@@ -186,6 +219,7 @@
         <!-- Escena 3, tunel-->
         <div class="recuadros recuadro4">
             <h2></h2>
+            <a href="index3.html"> <img src="img/index2/flecha.png"></a>
             <!-- caida alicia-->
             <div class="recuadro-animacion2">
                 <div class="animacion-alicia-caida"></div>
