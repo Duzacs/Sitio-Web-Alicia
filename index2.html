@@ -37,7 +37,8 @@
 
             position: relative;
             overflow-y: scroll;
-            scroll-snap-type: y mandatory;
+           
+            scroll-behavior: smooth;
         }
 
         /* Estilos para los recuadros de la escena */
@@ -53,6 +54,7 @@
 
         .recuadro1 {
             background: linear-gradient(0deg, #7068C6, #F0CCEF);
+            display: flex;
             flex-direction: column;
         }
         .recuadro1 h1{
@@ -86,8 +88,10 @@
         .recuadro4 {
             background: linear-gradient(0deg, #91D198, #B5DBEF, #91D198);
             flex-direction: column;
-            background-image:url(img/index2/fondos-tunel.png)
-            background-size: contain;
+            height: 2080px;
+            width: 1920px;
+            background-image:url(img/index2/fondos-tunel.png);
+      
             background-repeat: no-repeat;
         }
 
@@ -114,12 +118,11 @@
         }
 
         .animacion-alicia-caida{
-        width: 1000px;
-        height: 600px;
-        background-image: url(img/index2/animacion-caida.png);
-        background-size: cover;
+        width: 1920px;
+        height: 2080px;
+        background-image: url(img/index2/animacion-caida.png); 
         background-repeat: no-repeat;
-        animation: caida 2s infinite;
+        animation: caida 18s infinite;
 
         }
 
@@ -140,18 +143,20 @@
         }
 
         .recuadro-animacion{
-
         }
 
         /* Animación cambio de frames */
 
         @keyframes caida{
             from{
-                background-position-y: 0px;
+                background-position-y: -900px;
             }to{
-                 background-position-y: 300px;
+                 background-position-y: 2100px;
             }
         }
+
+        /* fade in del texto
+        tut: https://alvarotrigo.com/blog/css-text-animations/ */
 
         .lineup{
               animation: 2s anim-lineUp ease-out infinite;
@@ -219,7 +224,7 @@
         <!-- Escena 3, tunel-->
         <div class="recuadros recuadro4">
             <h2></h2>
-            <a href="index3.html"> <img src="img/index2/flecha.png"></a>
+           
             <!-- caida alicia-->
             <div class="recuadro-animacion2">
                 <div class="animacion-alicia-caida"></div>
