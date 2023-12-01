@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Alicia Interactivo</title>
+
+    <!-- Fuente -->
+    <link href='https://fonts.googleapis.com/css?family=Alice' rel='stylesheet'>
+
+    <style>
+        /* Estilos para el cuerpo del documento */
+        html, body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0; 
+        }
+
+        /* Estilos para el contenedor */
+        #contenedor {
+            scroll-behavior: smooth;
+            flex: 1;
+            position: relative;
+            overflow-y: scroll;
+            scroll-snap-type: y mandatory;
+        }
+
+        h1, h2, p {
+            font-family: 'Alice', sans-serif;
+        }
+
+        /* Estilos para el footer */
+        footer {
+            background-color: whitesmoke;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+
+        .slides{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            color: white;
+            scroll-snap-align: start;
+        }
+
+        .slides img{
+            width: 350px;
+        }
+
+        .slides h2{
+            font-size: 70px;
+            font-weight: 600px;
+            max-width: 650px;
+        }
+
+        .slide1{
+            background: linear-gradient(180deg, #0C0152, #100228);
+        }
+
+        .slide2{
+            background: linear-gradient(180deg, #100228, #FFB5D4);
+        }
+
+        .slide3{
+            background: linear-gradient(180deg, #FFB5D4, #BE95E4);
+        }
+
+    </style>
+</head>
+<body>
+<div id="contenedor">
+
+    <div class="slides slide1">
+      <h1> FIN </h1>
+    </div>
+
+    <div class="slides slide2">
+    </div>
+
+    <div class="slides slide3">
+    </div>
+
+    <header>
+        <!-- Contenido del encabezado si es necesario -->
+    </header>
+
+</div>
+
+
+
+
+
+<!-- Scripts, enlaces a librerías JS, etc. -->
+
+</body>
+</html>
