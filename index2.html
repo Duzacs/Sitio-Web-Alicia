@@ -21,7 +21,6 @@
         }
 
 
-
         /* Estilos para el cuerpo del documento */
         body {
 
@@ -49,11 +48,12 @@
             color: white;
             scroll-snap-align: start;
             text-align: right;
-
         }
 
         .recuadro1 {
-            background: linear-gradient(0deg, #7068C6, #F0CCEF);
+            width: 1920px;
+            height: 1080px;
+            background-image: url(img/index2/fondos-inicio.png);
             display: flex;
             flex-direction: column;
         }
@@ -66,18 +66,11 @@
         .recuadro1 p{
             margin-right: 150px;
             margin-top: 8px;
-        }
-
+        } 
 
         .recuadro2 {
-            background: linear-gradient(0deg, #91D198, #7068C6);
-            flex-direction: column;
-            height: 100px;
-        }
-
-        .recuadro3 {
-            background: linear-gradient(0deg, #91D198, #B5DBEF, #91D198);
-            flex-direction: column;
+            width: 1920px;
+            height: 1800px;
             background-image: url(img/index2/fondos-arboles.png);
             z-index: -10;
             background-size: contain;
@@ -85,21 +78,28 @@
             /*background-image: url(img/index2/fondos-alicia.png); no se si dejarlo en capas*/
         }
       
-        .recuadro3 img{
-            width: 700px;
+        .recuadro2 img{
+            width: auto;
+            height: auto;
+            max-width: 700px;
             position: relative;
-            margin-left: 100px
+            margin-left: 100px;
+            background-size: contain;
         }
-        .recuadro4 {
+        .recuadro3 {
             background: linear-gradient(0deg, #91D198, #B5DBEF, #91D198);
             flex-direction: column;
             height: 2080px;
             width: 1920px;
-            background-image:url(img/index2/fondos-tunel.png);
-      
+            background-image:url(img/index2/fondos-tunel-1.png);
+            background-size: contain;
             background-repeat: no-repeat;
+            z-index: -10;
         }
 
+        .recuadro3 img{
+            z-index: 10;
+        }
 
         /* Estilos para elementos de fondo / entidades */
 
@@ -114,8 +114,8 @@
             }
 
         .animacion-alicia-pesta{
-        width: 1000px;
-        height: 600px;
+        width: 1300px;
+        height: 900px;
         background-image: url(img/index2/animacion-alicia-1.png);
         background-size: cover;
         background-repeat: no-repeat;
@@ -216,25 +216,20 @@
 
         </div>
 
-        <!-- Transicion-->
-        <div class="recuadros recuadro2">
-            <h2></h2>
-        </div>
-
         <!-- Escena 2, se asoma-->
-        <div class="recuadros recuadro3">
+        <div class="recuadros recuadro2">
             <h2></h2>
             <img src="img/index2/alicia-agachada.png">
         </div>
 
         <!-- Escena 3, tunel-->
-        <div class="recuadros recuadro4">
+        <div class="recuadros recuadro3">
             <h2></h2>
-           
+                       <img src="img/index2/fondos-tunel-2.png">
+
             <!-- caida alicia-->
             <div class="recuadro-animacion2">
                 <div class="animacion-alicia-caida"></div>
-            
             </div>
 
 
