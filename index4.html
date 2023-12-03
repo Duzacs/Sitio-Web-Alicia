@@ -1,4 +1,3 @@
-/*Escena 5 y 6*/
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,30 +40,55 @@
             position: relative;
         }
 
+        /*Estilos para slide 1*/
+
         /* Estilos para el contenedor del personaje */
-        #personaje {
-            width: 450px; /* Ajusta el tamaño del personaje según sea necesario */
-            height: auto;
-            position: relative;
-            top: 180px;
-            right: 400px;
-            background-image: url("img/Comer2.png"); /* Imagen inicial, a punto de comer ----PONER BOCETO*/
+        #comer{
+            width: 600px; /* Ajusta el tamaño del personaje según sea necesario */
+            height: 600;
+            position: absolute;
+            top: 10px;
+            right: 40px;
+            z-index: 1; /* Asegura que el personaje esté encima del fondo */
+            background-image: url('img/index4/Come2.png');
             background-size: contain;
             background-repeat: no-repeat;
             animation: comer 3s steps(1) infinite; /* Usas 'comer' para animar #personaje */
         }
 
         /* Definición de la animación comer*/
-        @keyframes comer {
+        @keyframes transform {
             0%, 100% {
-                background-image: url('img/Come2.png'); /* Imagen sosteniendo alimento*/
+                background-image: url('img/index4/Come2.png'); /* Imagen sosteniendo alimento */
             }
             50% {
-                background-image: url('img/Come3.png'); /* Imagen acercando alimento */
+                background-image: url('img/index4/Come3.png'); /* Imagen comiendo*/
             }
-            /*PROBABLEMENTE 3ER FRAME, DEPENDE DE NAY*/
+            /*PROBABLEMENTE 3ER FRAME, DEPENDE DE NAY */
+        } 
+
+        /* Estilos para el slide 2 */
+        #crecer{
+            width: 420px;
+            height: 420px;
+            top: 10px;
+            right: 40px;
+            z-index: 1; /* Asegura que el personaje esté encima del fondo */
+            transition: transform 1s ease-in-out;
+            background-image: url('img/index4/Crece.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation: agrandar 8s forwards; /* Aplica la animación automáticamente al cargar la página */
         }
 
+        @keyframes agrandar {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.5);
+            }
+        }
 
         .slides{
             width: 100%;
@@ -75,17 +99,21 @@
             gap: 50px;
             color: white;
             scroll-snap-align: start;
+            text-align: center; /* Centra el texto horizontalmente */
         }
 
         .slides img{
             width: 350px;
         }
 
-        .slides h2{
-            font-size: 70px;
-            font-weight: 600px;
+        .slides h2, .slides h3, .slides h4 {
+            font-size: 40px;
+            font-family:'Alice';
+            font-weight: 30px;
             max-width: 650px;
+            margin: 0 auto; /* Centra el texto horizontalmente */
         }
+
 
         .slide1{
             background: linear-gradient(180deg, #0C0152, #100228);
@@ -93,10 +121,27 @@
 
         .slide2{
             background: linear-gradient(180deg, #100228, #FFB5D4);
+            background-image: url('img/img-3/fondo_tres.png');
         }
 
         .slide3{
             background: linear-gradient(180deg, #FFB5D4, #BE95E4);
+        }
+
+        .slides.slide3 a:hover {
+            color: #7C28CB; /* Cambia el color del texto al pasar el cursor sobre los enlaces */
+            display: inline-block; /* Hace que los enlaces sean elementos en línea con bloque */
+        }
+        .slides.slide3 a:nth-child(1) {
+            float: left; /* Coloca el primer enlace a la izquierda */
+            margin-left: 80px; /* Añade un margen a la derecha para separar los enlaces */
+            margin-bottom: 400px;
+        }
+
+        .slides.slide3 h4:nth-child(2) {
+            float: right; /* Coloca el segundo enlace a la derecha */
+            margin-right: -40px; /* Añade un margen a la izquierda para separar los enlaces */
+            margin-top: -400px;
         }
 
     </style>
@@ -105,13 +150,16 @@
 <div id="contenedor">
 
     <div class="slides slide1">
-        <div id="personaje"></div>
+        <div id="comer"></div>
     </div>
 
     <div class="slides slide2">
+        <div id="crecer"></div>
+        <h4>¿Por qué todo <p> se ve tan pequeño?</h4>
     </div>
 
     <div class="slides slide3">
+        <h4>Te has hecho muy grande para salir...</h4>
         <a href="index5">Beber antídoto</a>
     </div>
 
@@ -120,8 +168,6 @@
     </header>
 
 </div>
-
-
 
 
 <footer>
@@ -136,3 +182,5 @@
 
 </body>
 </html>
+
+    
