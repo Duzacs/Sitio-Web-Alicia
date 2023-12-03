@@ -17,6 +17,7 @@
             flex-direction: column;
             min-height: 100vh;
             margin: 0; 
+            font-family: 'Alice', sans-serif;
         }
 
         /* Estilos para el contenedor */
@@ -28,10 +29,6 @@
             scroll-snap-type: y mandatory;
         }
 
-        h1, h2, p {
-            font-family: 'Alice', sans-serif;
-        }
-
         /* Estilos para el footer */
         footer {
             background-color: whitesmoke;
@@ -41,30 +38,58 @@
         }
 
         /* Estilos para el contenedor del personaje */
-        #personaje {
-            width: 918px; /* Ajusta el tamaño del personaje según sea necesario */
-            height: 918px;
-            position: relative;
+        #img-personaje {
+            width: 918px; /* Ajusta el tamaño del contenedor del personaje según sea necesario */
+            height: 700px;
+            position: absolute;
             top: 180px;
             right: 400px;
-            background-image: url('img/img-3/acostada-1.png'); /* Imagen inicial con los ojos cerrados */
-            background-size: contain;
-            background-repeat: no-repeat;
-            animation: pestañeo 3s steps(1) infinite; /* Usas 'pestañeo' para animar #personaje */
+            z-index: 1; /* Asegura que el personaje esté encima del fondo */
         }
 
-        /* Definición de la animación de pestañeo */
-        @keyframes pestañeo {
-            0%, 100% {
-                background-image: url('img/img-3/acostada-1.png'); /* Imagen con los ojos abiertos al inicio y al final */
+        #img-personaje img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0; /* Inicialmente oculta todas las imágenes */
+        }
+
+        /* Definición de la animación */
+        @keyframes transicionOjos {
+            0% {
+                opacity: 1; /* Hacer visible la imagen acostada-1.png al inicio */
             }
-            50% {
-                background-image: url('img/img-3/acostada-3.png'); /* Imagen con los ojos cerrados a la mitad de la animación */
+
+            33.33% {
+                opacity: 0; /* Hacer invisible la imagen acostada-1.png y al mismo tiempo mostrar acostada-2.png */
+            }
+            66.66% {
+                opacity: 0; /* Hacer visible la imagen acostada-2.png y ocultar acostada-3.png */
+            }
+            100% {
+                opacity: 1; /* Hacer invisible la imagen acostada-2.png al final */
             }
         }
+
+        /* Aplicar la animación a cada imagen según su clase */
+        #img-personaje .img-1 {
+            animation: transicionOjos 9s steps(1) infinite; /* Animación con una duración de 9 segundos para las transiciones */
+        }
+
+        #img-personaje .img-2 {
+            animation: transicionOjos 9s steps(1) infinite; /* Animación con una duración de 9 segundos para las transiciones */
+            animation-delay: 3s; /* Retraso de 3 segundos para que comience después de img-1 */
+        }
+
+        #img-personaje .img-3 {
+            animation: transicionOjos 9s steps(1) infinite; /* Animación con una duración de 9 segundos para las transiciones */
+            animation-delay: 6s; /* Retraso de 6 segundos para que comience después de img-2 */
+        }
+
+
 
         #elije {
-            width: 600px; /* Ajusta el tamaño del personaje según sea necesario */
+            width: 600px; /* Ajusta el tamaño de la imagen según sea necesario */
             height: 600px;
             top: 50px;
             left: 30px;
@@ -96,15 +121,6 @@
             scroll-snap-align: start;
         }
 
-        .slides img{
-            width: 350px;
-        }
-
-        .slides h2{
-            font-size: 70px;
-            font-weight: 600px;
-            max-width: 650px;
-        }
 
         .slide1{
             background: linear-gradient(180deg, #0C0152, #100228);
@@ -167,9 +183,14 @@
 <body>
 <div id="contenedor">
 
-    <div class="slides slide1">
-        <div id="personaje"></div>
+    <div class="slides slide1" style="background-image: url('img/img-3/fondo_uno.png');">
+        <div id="img-personaje">
+            <img class="img-1" src="img/img-3/acostada-1.png">
+            <img class="img-2" src="img/img-3/acostada-2.png">
+            <img class="img-3" src="img/img-3/acostada-3.png">
+        </div>
     </div>
+
 
     <div class="slides slide2">
          <div id="elije"></div>
@@ -178,7 +199,7 @@
 
     <div class="slides slide3">
         <img src="img/img-3/mesa.png">
-        <a href="index5">Beber</a>
+        <a href="index2">Beber</a>
         <a href="index4">Comer</a>
     </div>
 
