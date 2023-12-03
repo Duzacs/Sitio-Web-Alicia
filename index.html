@@ -39,7 +39,7 @@
         /* Estilos para el contenedor */
         #contenedor {
             position: relative;
-            overflow-y: scroll;
+            overflow-y: auto scroll;
             scroll-snap-type: y mandatory;
             scroll-behavior: smooth;
         }
@@ -47,12 +47,12 @@
         /* Estilos para los recuadros de la escena */
         .recuadros {
             display: flex;
-            height: 100vh;
             align-items: center;
             justify-content: center;
             color: white;
             scroll-snap-align: start;
             text-align: center;
+            background-repeat: no-repeat
         }
 
         .recuadro1 {
@@ -61,6 +61,7 @@
             display: flex;
             flex-direction: column;
             position: relative;
+            height: 100vh;
         }
 
         .recuadro1 .creditos {
@@ -79,25 +80,26 @@
             background: linear-gradient(0deg, #ffb5d3, #87dbfc, #87dbfc, #7c28cb);
             position: relative; 
             flex-direction: column;
+            width: 100%;
+            height: 270vh; 
+
         }
 
         .recuadro3 {
             background: linear-gradient(0deg, #7c28cb, #87dbfc, #87dbfc, #ffb5d3);
             position: relative;
             flex-direction: column;
+            width: 100%; 
+            height: 350vh; 
         }
 
         .recuadro4 {
             background: linear-gradient(0deg, #87dbfc, #87dbfc, #87dbfc, #7c28cb);
             position: relative;
             flex-direction: column;
+            width: 100vw;
+            height: 270vh;
         }
-
-        .recuadro4 h2{
-            margin-top:;
-        }
-
-
 
         /* Estilos para las animaciones */
         .recuadro-animacion{
@@ -296,15 +298,6 @@
         left: 0; 
         } 
 
-        .recuadro2-capa3{ 
-        position: absolute; 
-        z-index: 5; 
-        width: 100%;
-        height: 100%;
-        top: 0; 
-        left: 0; 
-        } 
-
         .recuadro4-capa1{ 
         position: absolute; 
         z-index: 1; 
@@ -314,23 +307,7 @@
         left: 0; 
         } 
 
-        .recuadro4-capa2{ 
-        position: absolute; 
-        z-index: 2; 
-        width: 100%;
-        height: 100%;
-        top: 0; 
-        left: 0; 
-        } 
 
-        .gradientedivisor {
-        position: absolute;
-        z-index: 7;
-        margin-top: 630px;
-        background: linear-gradient(rgba(255,0,0,0), rgba(255, 181, 211, 100) 80%, rgba(255,0,0,0));
-        width: 100%;
-        height: 200px;
-        }
 
         /* Estilos continuacion para ir al siguiente capitulo */
 
@@ -338,9 +315,8 @@
         position: absolute;
         font-size: 30px;
         z-index: 8;
-        bottom: 40px; 
-        right: 40px;  
-        text-align: right;
+        bottom: 80px;  
+        text-align: center;
 
         }
 
@@ -373,45 +349,40 @@
                 <img src="img/index1/recuadro2-capa1.png"class="recuadro2-capa1">
                 <img src="img/index1/recuadro2-conejo.png"class="recuadro2-conejo">
                 <img src="img/index1/recuadro2-capa2.png"class="recuadro2-capa2">
-                <img src="img/index1/recuadro2-capa3.png"class="recuadro2-capa3">
-                <div class="gradientedivisor"></div>
         </div>
 
         <div class="recuadros recuadro3">
                 <div class="animacion-alicia-mirando"></div>
                 <div class="animacion-conejo-salto"></div>
-                <img src="img/index1/recuadro2-capa1.png"class="recuadro2-capa1">
                 <img src="img/index1/recuadro2-capa2.png"class="recuadro2-capa2">
+                <img src="img/index1/recuadro3-capa1.png"class="recuadro3-capa1">
                 <img src="img/index1/recuadro2-alicia.png"class="recuadro2-alicia">
-                <img src="img/index1/recuadro2-capa3.png"class="recuadro2-capa3">
-                <div class="gradientedivisor"></div>
-            ¡
+            
         </div>
-    <div class="recuadros recuadro4">
-        <img src="img/index1/recuadro4-capa1.png" class="recuadro4-capa1">
-        <img src="img/index1/recuadro4-capa2.png" class="recuadro4-capa2">
-        <div class="recuadro-animacion">
-        <div class="animacion-alicia-caminata"></div>
-        <div class="animacion-conejo-caminata"></div>
-        </div>
-        <div class="gradientedivisor"></div>
-
-        <div class="continuacion"><a href="index2.html">Sigue al conejo...</a></div>
-
-            <footer>
+            <div class="recuadros recuadro4">
+                <img src="img/index1/recuadro4-capa1.png" class="recuadro4-capa1">
+            <div class="recuadro-animacion">
+                <div class="animacion-alicia-caminata"></div>
+                <div class="animacion-conejo-caminata"></div>
+            </div>
+            <div class="gradientedivisor"></div>
+            <div class="continuacion"><a href="index2.html">Sigue al conejo...</a>
+            </div>
+            
+        <footer>
         <!-- Botones en el footer -->
         <a href="index.html">Capítulo 1</a>
         <a href="index2.html">Capítulo 2</a>
         <a href="index3.html">Capítulo 3</a>
         <a href="index4.html">Capítulo 4</a>
-    </footer>
+        </footer>
 
         </div>
 
 
 
          </div> <!-- Cierre contenido de los frames-->
-         </div> 
+         
 
 
 
