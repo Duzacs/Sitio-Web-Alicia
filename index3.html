@@ -37,6 +37,9 @@
             position: relative;
         }
 
+        /* Estilos para el slide 1 */
+
+
         /* Estilos para el contenedor del personaje */
         #img-personaje {
             width: 918px; /* Ajusta el tamaño del contenedor del personaje según sea necesario */
@@ -57,36 +60,37 @@
         /* Definición de la animación */
         @keyframes transicionOjos {
             0% {
-                opacity: 1; /* Hacer visible la imagen acostada-1.png al inicio */
+                opacity: 1;
             }
 
             33.33% {
-                opacity: 0; /* Hacer invisible la imagen acostada-1.png y al mismo tiempo mostrar acostada-2.png */
+                opacity: 0; 
             }
             66.66% {
-                opacity: 0; /* Hacer visible la imagen acostada-2.png y ocultar acostada-3.png */
+                opacity: 0; 
             }
             100% {
-                opacity: 1; /* Hacer invisible la imagen acostada-2.png al final */
+                opacity: 1; 
             }
         }
 
         /* Aplicar la animación a cada imagen según su clase */
         #img-personaje .img-1 {
-            animation: transicionOjos 9s steps(1) infinite; /* Animación con una duración de 9 segundos para las transiciones */
+            animation: transicionOjos 3s steps(1) infinite; /* Animación con una duración de 3 segundos para las transiciones */
         }
 
         #img-personaje .img-2 {
-            animation: transicionOjos 9s steps(1) infinite; /* Animación con una duración de 9 segundos para las transiciones */
-            animation-delay: 3s; /* Retraso de 3 segundos para que comience después de img-1 */
+            animation: transicionOjos 3s steps(1) infinite; /* Animación con una duración de 3 segundos para las transiciones */
+            animation-delay: 1s; /* Retraso de 3 segundos para que comience después de img-1 */
         }
 
         #img-personaje .img-3 {
-            animation: transicionOjos 9s steps(1) infinite; /* Animación con una duración de 9 segundos para las transiciones */
-            animation-delay: 6s; /* Retraso de 6 segundos para que comience después de img-2 */
+            animation: transicionOjos 3s steps(1) infinite; /* Animación con una duración de 3 segundos para las transiciones */
+            animation-delay: 2s; /* Retraso de 6 segundos para que comience después de img-2 */
         }
 
 
+        /* Estilos para el slide 2 */
 
         #elije {
             width: 600px; /* Ajusta el tamaño de la imagen según sea necesario */
@@ -134,14 +138,6 @@
             background: linear-gradient(180deg, #FFB5D4, #BE95E4);
         }
 
-        /* Estilos para la imagen mesa.png */
-        img[src="img/img-3/mesa.png"] {
-            /* Cambia el tamaño de la imagen */
-            width: 900px; 
-            height: auto; /* Mantener la proporción */
-            position: relative;
-            left: -350px; 
-        }
 
         img[src="img/img-3/arrow-down.png"] {
             /* Cambia el tamaño de la imagen */
@@ -152,29 +148,33 @@
             left: -350px; 
         }
 
+        /* Estilos para el slide 3 */
+
         .slides.slide3 a {
             font-family: 'Alice', sans-serif;
-            font-size: 25px; /* Cambia el tamaño de la fuente */
+            font-size: 25px; 
+            font-weight: 500;
             color: white;
             text-decoration: none;
-            margin-right: 10px; /* Añade espacio entre los enlaces */
+            position: absolute;
         }
 
 
         .slides.slide3 a:hover {
-            /* ... (estilos previos) */
             color: #7C28CB; /* Cambia el color del texto al pasar el cursor sobre los enlaces */
             display: inline-block; /* Hace que los enlaces sean elementos en línea con bloque */
         }
 
         .slides.slide3 a:nth-child(1) {
             float: left; /* Coloca el primer enlace a la izquierda */
-            margin-right: 20px; /* Añade un margen a la derecha para separar los enlaces */
+            margin-left: 135px; /* Añade un margen a la derecha para separar los enlaces */
+            margin-bottom: 400px;
         }
 
         .slides.slide3 a:nth-child(2) {
             float: right; /* Coloca el segundo enlace a la derecha */
-            margin-left: 20px; /* Añade un margen a la izquierda para separar los enlaces */
+            margin-right: -840px; /* Añade un margen a la izquierda para separar los enlaces */
+            margin-top: -400px;
         }
 
 
@@ -197,8 +197,7 @@
         <img src="img/img-3/arrow-down.png">
     </div>
 
-    <div class="slides slide3">
-        <img src="img/img-3/mesa.png">
+    <div class="slides slide3" style="background-image: url('img/img-3/fondo_tres.png');">
         <a href="index2">Beber</a>
         <a href="index4">Comer</a>
     </div>
