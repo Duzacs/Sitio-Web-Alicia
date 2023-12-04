@@ -47,8 +47,13 @@
 
 
         .audio-player{
+            position: absolute;
+            margin-top: 10px;
+            left: 40%;
             opacity: 10%;
+            z-index: 30;
         }
+
 
         /* Estilos para el contenedor del personaje */
         #img-personaje {
@@ -208,16 +213,18 @@
 <div id="contenedor">
 
     <div class="slides slide1" style="background-image: url('img/index3/uno.png');">
+
+        <div class="audio-player">
+            <audio controls>
+            <source src="audio/fondo3.mp3" type="audio/mp3">
+            </audio>
+        </div>
+        
         <div id="img-personaje">
             <img class="img-1" src="img/index3/acostada-1.png">
             <img class="img-2" src="img/index3/acostada-2.png">
             <img class="img-3" src="img/index3/acostada-3.png">
              <div id="texto-despierta">¡Despierta Alicia!</div>
-        </div>
-        <div class="audio-player">
-            <audio controls>
-                <source src="audio/fondo3.mp3" type="audio/mp3">
-            </audio>
         </div>
     </div>
 
