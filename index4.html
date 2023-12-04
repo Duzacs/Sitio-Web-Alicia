@@ -29,10 +29,6 @@
             scroll-snap-type: y mandatory;
         }
 
-        h1, h2, p {
-            font-family: 'Alice', sans-serif;
-        }
-
         /* Estilos para el footer */
         footer {
             background-color: whitesmoke;
@@ -42,12 +38,11 @@
         }
 
         /*Estilos para slide 1*/
-        
         #comer{
             width: 600px; /* Ajusta el tamaño del personaje según sea necesario */
             height: 600px;
-            top: 0px;
-            right: 290px;
+            top: 155px;
+            right: 400px;
             position: absolute;
             z-index: 1; /* Asegura que el personaje esté encima del fondo */
             background-image: url('img/index4/Come2.png');
@@ -67,54 +62,62 @@
         } 
 
         /* Estilos para el slide 2 */
-        #crecer{
-            width: 420px;
-            height: 420px;
-            right: 200px;
-            z-index: 1; /* Asegura que el personaje esté encima del fondo */
-            transform: translateX(750px); /* Ajusta este valor según sea necesario para mover hacia la derecha */
-            transition: transform 1s ease-in-out;
+        #crecer {
             background-image: url('img/index4/Crece.png');
-            margin-right: 250px; /* Ajusta este valor según sea necesario para mover hacia la derecha */
+            width: 300px;
+            height: 300px;
+            right: 200px;
+            z-index: 1;
+            transform: translateX(750px);
+            margin-left: 600px;
+            margin-top: 250px;
+            transition: transform 1s ease-in-out;
             background-size: cover;
             background-repeat: no-repeat;
-            animation: agrandar 8s forwards; /* Aplica la animación automáticamente al cargar la página */
+            animation: agrandar 8s forwards;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+        }
+
+        #crecer h2 {
+            font-family: 'Alice';
+            font-size: 140px;
+            font-weight: 30px;
+            text-align: center; /* Centra el texto horizontalmente */
         }
 
         @keyframes agrandar {
             0% {
-                transform: scale(1);
-                           
-
+                transform: scale(1);     
             }
             100% {
-               
-                transform: scale(1.5);
+                transform: scale(3);
             }
         }
-        
-            .slides{
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            gap: 50px;
-            color: white;
-            scroll-snap-align: start;
-            text-align: center; /* Centra el texto horizontalmente */
+
+        .slides{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        gap: 50px;
+        color: whitesmoke;
+        scroll-snap-align: start;
+        text-align: center; /* Centra el texto horizontalmente */
         }
 
         .slides img{
             width: 350px;
         }
 
-        .slides h2, .slides h3, .slides h4 {
+        .slides h2, {
             font-family:'Alice';
-            font-size: 40px;
+            font-size: 50px;
             font-weight: 30px;
-            max-width: 650px;
-            margin: 0 auto; /* Centra el texto horizontalmente */
-        }
-
+            position: absolute;
+            left: 20px;
+       }
 
         .slide1{
             background: linear-gradient(180deg, #0C0152, #100228);
@@ -130,7 +133,6 @@
         }
 
         .slides.slide3 {
-            padding-top: 150px;  
             display: flex;
             flex-direction: column;
             align-items: center; /* Centra el contenido horizontalmente */
@@ -161,14 +163,13 @@
             <audio controls>
             <source src="audio/<fondo4.mp3" type="audio/mp3">
             </audio>
-            </div>  
-        
+            </div>
         <div id="comer"></div>
     </div>
 
     <div class="slides slide2">
         <div id="crecer"></div>
-        <h4>¿Por qué todo se ve tan pequeño?</h4>
+        <h2>¿Por qué todo se ve tan pequeño?</h2>
     </div>
 
     <div class="slides slide3">
@@ -196,5 +197,3 @@
 
 </body>
 </html>
-
-    
