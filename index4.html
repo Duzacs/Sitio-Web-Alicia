@@ -40,15 +40,14 @@
             position: relative;
         }
 
-/*Estilos para slide 1*/
-
-        /* Estilos para el contenedor del personaje */
+        /*Estilos para slide 1*/
+        
         #comer{
             width: 600px; /* Ajusta el tamaño del personaje según sea necesario */
             height: 600px;
-            position: absolute;
             top: 0px;
             right: 290px;
+            position: absolute;
             z-index: 1; /* Asegura que el personaje esté encima del fondo */
             background-image: url('img/index4/Come2.png');
             background-size: cover;
@@ -64,18 +63,17 @@
             50% {
                 background-image: url('img/index4/Come3.png'); /* Imagen comiendo*/
             }
-            /*PROBABLEMENTE 3ER FRAME, DEPENDE DE NAY */
         } 
 
         /* Estilos para el slide 2 */
         #crecer{
             width: 420px;
             height: 420px;
+            margin-right: 100px;
+            transition: transform 1s ease-in-out;
             z-index: 1; /* Asegura que el personaje esté encima del fondo */
-            transform: translateX(100px)
             transition: transform 1s ease-in-out;
             background-image: url('img/index4/Crece.png');
-            margin-right: 100px;
             background-size: cover;
             background-repeat: no-repeat;
             animation: agrandar 8s forwards; /* Aplica la animación automáticamente al cargar la página */
