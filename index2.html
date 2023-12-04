@@ -18,23 +18,31 @@
             margin: 0px;}
         }
 
+        html, body {
+        margin: 0; /* Asegura que no haya márgenes en el cuerpo y el HTML */
+        padding: 0; /* Asegura que no haya relleno en el cuerpo y el HTML */
+        overflow-x: hidden; /* Oculta la barra de desplazamiento horizontal */
+        }
+
         h1{
             font-size: 100px;
         }
 
-
         /* Estilos para el cuerpo del documento */
         body {
-
             height: 100vh;
             width: 100%;
             display: flex;
             flex-direction: column;
             margin: 0;
+            overflow-x: hidden; /* Oculta la barra de desplazamiento horizontal */
         }
 
         /* Estilos para el contenedor */
         #contenedor {
+            width: 100%;
+            max-width: 100vw;
+            overflow-x: hidden;
             position: relative;
             overflow-y: scroll;
             scroll-behavior: smooth;
@@ -43,34 +51,35 @@
         /* Estilos para los recuadros de la escena */
         .recuadros {
             display: flex;
-            height: 100vh;
+            height: auto;
             color: white;
             scroll-snap-align: start;
             text-align: right;
         }
 
         .recuadro1 {
-            width: 1920px;
-            height: 1080px;
+            width: 1420px; /* Utiliza el ancho completo del viewport */
+            height: auto; /* Ajusta la altura automáticamente según el contenido */
             background-image: url(img/index2/fondos-inicio.png);
             display: flex;
             flex-direction: column;
-        }
-        .recuadro1 h1{
-            font-size: 70px;
-            margin-right: 250px;
-            margin-top: 200px;
-            flex-direction: column;
+            align-items: center; /* Centra el contenido horizontalmente */
+            text-align: center; /* Centra el texto */
+            padding: 50px; /* Agrega un espacio interno */
         }
 
-        .recuadro1 p{
-            font-size: 25px;
-            margin-right: 300px;
-            margin-top: 8px;
-        } 
+        .recuadro1 h1 {
+            font-size: 5vw; /* Usa unidades de ancho relativas */
+            margin: 20px 0; /* Ajusta los márgenes superior e inferior */
+        }
+
+        .recuadro1 p {
+            font-size: 2vw; /* Usa unidades de ancho relativas */
+            margin-bottom: 20px; /* Ajusta el margen inferior */
+        }
 
         .recuadro2 {
-            width: 1920px;
+            width: 100%;
             height: 1800px;
         }
 
@@ -84,20 +93,23 @@
 
         .recuadro3 {
             flex-direction: column;
-            height: 2080px;
-            width: 1920px;
+            height: auto;
+            width: 100%;
             background-image: url(img/index2/fondos-tunel.png);
-            background-size: contain;
+            background-size: cover; /* Esto podría ayudar a que la imagen cubra completamente el área */
             background-repeat: no-repeat;
+            margin: 0; /* Asegúrate de que no haya márgenes adicionales */
+            padding: 0; /* Asegúrate de que no haya relleno adicional */
+            box-sizing: border-box; /* Considera el tamaño total incluyendo bordes y rellenos */
         }
 
         .recuadro3 p{
         position: absolute;
         font-size: 30px;
-        margin-top: 1900px;  
+        margin-top: 1300px;  
         margin-left: 930px;
-       color: #ffb5d3;
-       z-index: 1;
+        color: #ffb5d3;
+        z-index: 1;
         }
 
         /* Estilos para las animaciones */
@@ -114,6 +126,9 @@
         background-image: url(img/index2/animacion-alicia-1.png);
         background-size: cover;
         background-repeat: no-repeat;
+        position: absolute;
+        right: 600px;
+        top: 180px;
         animation: pesta 1s infinite;
         }
 
@@ -128,11 +143,7 @@
         }
 
 
-        .recuadro-animacion{
-        }
-
         /* Animación cambio de frames */
-
         @keyframes pesta{
             0%, 100%{
                 background-image: url('img/index2/animacion-alicia-1.png');
@@ -183,15 +194,14 @@
             }
         }
 
-        /* Estilos para  el footer */
-        footer {
-            padding: 19px;
-            text-align: center;
-            position: absolute;
-            bottom: 0;
-            display:flex;
-          
-            margin-left: 750px;
+    footer {
+        padding: 19px;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: center; /* Centra horizontalmente los elementos */
+        width: 100%; /* Utiliza el ancho completo del viewport */
         }
 
         footer a {
@@ -211,7 +221,6 @@
 <body>
 
     <div id="contenedor">
-
        
         <!-- Primera escena, alicia--> 
 
@@ -222,7 +231,7 @@
             <audio controls>
             <source src="audio/<fondo2.mp3" type="audio/mp3">
             </audio>
-            </div>   
+        </div>   
 
          <div class="lineup">
                 <h1>¿Qué hago?</h1>
@@ -260,7 +269,6 @@
     </footer>
 
 <!-- Scripts, enlaces a librerías JS, etc. -->
-
 
 
 </body>
