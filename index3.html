@@ -46,7 +46,7 @@
         }
 
         .audio-player{
-            opacity: 100%;
+            opacity: 10%;
         }
 
         /* Estilos para el contenedor del personaje */
@@ -56,7 +56,7 @@
             position: absolute;
             top: 180px;
             right: 400px;
-            z-index: 1; /* Asegura que el personaje esté encima del fondo */
+            z-index: 0; /* Asegura que el personaje esté encima del fondo */
         }
 
         #img-personaje img {
@@ -193,6 +193,14 @@
             margin-top: -400px;
         }
 
+        #audio-player {
+        position: absolute;
+        top: 20px; /* Ajusta el valor superior según sea necesario */
+        right: 20px; /* Ajusta el valor derecho según sea necesario */
+        z-index: 9999; /* Asegura que el reproductor esté encima de otros elementos */
+        }
+
+
     </style>
 </head>
 <body>
@@ -207,7 +215,7 @@
         </div>
         <div class="audio-player">
             <audio controls>
-            <source src="audio/fondo3.mp3" type="audio/mp3">
+                <source src="audio/fondo3.mp3" type="audio/mp3">
             </audio>
         </div>
     </div>
