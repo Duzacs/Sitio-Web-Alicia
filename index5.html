@@ -58,7 +58,7 @@
             position: relative;
             margin-top: -160px;
             left: 100px;
-            animation: shrinkImage 1s forwards; /* Agregamos la animación a la imagen */
+            animation: shrinkImage 3s forwards; /* Agregamos la animación a la imagen */
         }
 
 
@@ -67,7 +67,7 @@
                 transform: scale(1); /* Tamaño original */
             }
             to {
-                transform: scale(0.5); /* Tamaño más pequeño */
+                transform: scale(0.3); /* Tamaño más pequeño */
             }
         }
 
@@ -96,9 +96,9 @@
         }
 
         .recuadro3 {
-        	width: 100vw;
+        	width: 100%;
         	height: 1080px;
-        	background-image: url(img/index5/puerta.png) ;
+        	background-image: url(img/index5/puerta.png);
         	background-size: cover;
         	background-repeat: no-repeat;
             background: linear-gradient(0deg, #91D198, #B5DBEF, #91D198);
@@ -148,7 +148,7 @@
     <div id="contenedor">
 
         <!-- Primera escena, Alicia con botellita-->
-        <div class="recuadros recuadro1">
+        <div class="recuadros recuadro1" style= "background-image: url(img/index5/uno.png);">
         	<div class="audio-player">
             <audio controls>
             <source src="audio/fondo5.mp3" type="audio/mp3">
@@ -161,7 +161,7 @@
         <!-- Escena 2, chiquita-->
         <div class="recuadros recuadro2" style="background-image: url(img/index5/fondo.png);">
             <img class="img-2" src="img/index5/alicia-chiquita.png">
-            <h2> ¡Te has hecho chiquita! </h2>
+            <h2> ¡Te has hecho chiquitita! </h2>
             <p> Ahora pasas por la puerta...</p>
 
         </div>
