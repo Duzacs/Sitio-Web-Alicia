@@ -30,17 +30,24 @@
             scroll-snap-type: y mandatory;
         }
 
-        /* Estilos para el footer */
         footer {
-            background-color: rgba(255,255,255,0.3);
-            padding: 20px;
+            padding: 19px;
             text-align: center;
-            position: relative;
-            opacity: 0.5;
+            position: absolute;
+            bottom: 0;
+            display:flex;
+            margin-left: 750px;
         }
 
-        /* Estilos para el slide 1 */
+        footer a {
+            color: #ffb5d3; 
+             margin: 0 10px;
+             text-align: center;
+            }
 
+        .audio-player{
+            opacity: 10%;
+        }
 
         /* Estilos para el contenedor del personaje */
         #img-personaje {
@@ -135,7 +142,6 @@
             scroll-snap-align: start;
         }
 
-
         .slide1 {
             background: linear-gradient(180deg, #0C0152, #100228);
         }
@@ -169,7 +175,6 @@
             position: absolute;
         }
 
-
         .slides.slide3 a:hover {
             color: #7C28CB; /* Cambia el color del texto al pasar el cursor sobre los enlaces */
             display: inline-block; /* Hace que los enlaces sean elementos en línea con bloque */
@@ -188,7 +193,6 @@
             margin-top: -400px;
         }
 
-
     </style>
 </head>
 <body>
@@ -201,8 +205,12 @@
             <img class="img-3" src="img/index3/acostada-3.png">
              <div id="texto-despierta">¡Despierta Alicia!</div>
         </div>
+        <div class="audio-player">
+            <audio controls>
+            <source src="audio/<fondo3.mp3" type="audio/mp3">
+            </audio>
+        </div>
     </div>
-
 
     <div class="slides slide2">
          <div id="elige"></div>
@@ -221,14 +229,13 @@
 </div>
 
 
-
-
 <footer>
     <!-- Botones en el footer -->
     <a href="index.html">Capítulo 1</a>
     <a href="index2.html">Capítulo 2</a>
     <a href="index3.html">Capítulo 3</a>
     <a href="index4.html">Capítulo 4</a>
+    <a href="index5.html">Capítulo 5</a>
 </footer>
 
 <!-- Scripts, enlaces a librerías JS, etc. -->
