@@ -68,30 +68,29 @@
             margin-top: 8px;
         } 
 
+/*  */
+      
+
         .recuadro2 {
             width: 1920px;
             height: 1800px;
-            background-image: url(img/index2/fondos-arboles.png);
             z-index: -10;
-            background-size: contain;
-            background-repeat: no-repeat;
-            /*background-image: url(img/index2/fondos-alicia.png); no se si dejarlo en capas*/
         }
-      
+
         .recuadro2 img{
-            width: auto;
-            height: auto;
-            max-width: 700px;
-            position: relative;
-            margin-left: 100px;
+            width: 1300px;
+            height: 731.3px;
+            position: absolute;
+            padding-top: 750px;
             background-size: contain;
         }
+
         .recuadro3 {
             background: linear-gradient(0deg, #91D198, #B5DBEF, #91D198);
             flex-direction: column;
             height: 2080px;
             width: 1920px;
-            background-image:url(img/index2/fondos-tunel-1.png);
+            background-image:url(img/index2/fondos-tunel-2.png);
             background-size: contain;
             background-repeat: no-repeat;
             z-index: -10;
@@ -111,7 +110,7 @@
             margin-top: -150px;
             margin-bottom: 100px;
            
-            }
+        }
 
         .animacion-alicia-pesta{
         width: 1300px;
@@ -137,7 +136,7 @@
         }
 
         /* Animación cambio de frames */
-/*
+
         @keyframes pesta{
             0%, 100%{
                 background-image: url('img/index2/animacion-alicia-1.png');
@@ -146,7 +145,7 @@
                  background-image: url('img/index2/animacion-alicia-2.png');
             }
         }
-*/
+
         .recuadro-animacion{
         }
 
@@ -155,7 +154,9 @@
         @keyframes caida{
             from{
                 background-position-y: -900px;
-            }to{
+            }
+
+            to{
                  background-position-y: 2100px;
             }
         }
@@ -185,8 +186,8 @@
         transform: translateY(0%);
             }
         }
-        /* Estilos para el header y el footer */
 
+        /* Estilos para  el footer */
         footer {
             background-color: whitesmoke;
             padding: 20px;
@@ -205,39 +206,29 @@
         <!-- Primera escena, alicia-->
         <div class="recuadros recuadro1">
             <div class="lineup">
-            <h1>¿Qué hago?</h1>
-            <p>Scroll para ir al agujero</p>
+                <h1>¿Qué hago?</h1>
+                <p>Scroll para ir al agujero</p>
             </div>
-            <!-- animacion pesta;eo-->
+            <!-- animacion pestañeo-->
             <div class="recuadro-animacion">
                 <div class="animacion-alicia-pesta"></div>
-               
             </div>
-
         </div>
 
         <!-- Escena 2, se asoma-->
-        <div class="recuadros recuadro2">
-            <h2></h2>
+        <div class="recuadros recuadro2" style="background-image: url(img/index2/fondos-arboles.png);">
+            <h2>Lorem Ipsum</h2>
             <img src="img/index2/alicia-agachada.png">
         </div>
 
         <!-- Escena 3, tunel-->
-        <div class="recuadros recuadro3">
-            <h2></h2>
-                       <img src="img/index2/fondos-tunel-2.png">
-
-            <!-- caida alicia-->
+        <div class="recuadros recuadro3" style="background-image2: url(img/index2/fondos-tunel-1.png);">
             <div class="recuadro-animacion2">
-                <div class="animacion-alicia-caida"></div>
+                <div class="animacion-alicia-caida"></div> <!-- caida alicia-->
             </div>
-
-
-            
-
         </div>
 
-         </div> <!-- Cierre contenido de los frames-->
+    </div> <!-- Cierre contenido de los frames-->
 
     <footer>
         <!-- Botones en el footer -->
@@ -261,4 +252,4 @@
 
     Tutorial consultado para la animación de caminata: https://youtu.be/9iru1lvgd4w?si=MXCWQVk_DV4T4RTt
     
-    Tutorial para la traslación: https://www.youtube.com/watch?v=oNYHENW-9ig&ab_channel=Mr.WebDesigner->
+    Tutorial para la traslación: https://www.youtube.com/watch?v=oNYHENW-9ig&ab_channel=Mr.WebDesigner -->
