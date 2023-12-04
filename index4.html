@@ -69,11 +69,12 @@
         #crecer{
             width: 420px;
             height: 420px;
-            margin-right: 100px;
-            transition: transform 1s ease-in-out;
+            right: 200px;
             z-index: 1; /* Asegura que el personaje esté encima del fondo */
+            transform: translateX(250px); /* Ajusta este valor según sea necesario para mover hacia la derecha */
             transition: transform 1s ease-in-out;
             background-image: url('img/index4/Crece.png');
+            margin-right: 250px; /* Ajusta este valor según sea necesario para mover hacia la derecha */
             background-size: cover;
             background-repeat: no-repeat;
             animation: agrandar 8s forwards; /* Aplica la animación automáticamente al cargar la página */
@@ -87,13 +88,11 @@
                 transform: scale(1.5);
             }
         }
-
-        .slides{
+        
+            .slides{
             width: 100%;
             height: 100vh;
             display: flex;
-            /*align-items: center;
-            justify-content: center; */
             gap: 50px;
             color: white;
             scroll-snap-align: start;
@@ -105,8 +104,8 @@
         }
 
         .slides h2, .slides h3, .slides h4 {
-            font-size: 40px;
             font-family:'Alice';
+            font-size: 40px;
             font-weight: 30px;
             max-width: 650px;
             margin: 0 auto; /* Centra el texto horizontalmente */
@@ -126,9 +125,23 @@
             background: linear-gradient(180deg, #FFB5D4, #BE95E4);
         }
 
+        .slides.slide3 {
+            padding-top: 150px;  
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centra el contenido horizontalmente */
+        }
+        .slides.slide3 a {
+            margin-top: 0px; /* Ajusta este valor según sea necesario para cambiar la distancia desde el párrafo */
+            padding: 10px 20px; /* Ajusta el relleno según sea necesario */
+            color: white; /* Ajusta el color del texto según sea necesario */
+        }
         .slides.slide3 a:hover {
-            color: #7C28CB; /* Cambia el color del texto al pasar el cursor sobre los enlaces */
             display: inline-block; /* Hace que los enlaces sean elementos en línea con bloque */
+        }
+        .slides.slide3 h3 {
+            margin-bottom: 10px; 
+        }
        
     </style>
 </head>
@@ -141,12 +154,12 @@
 
     <div class="slides slide2">
         <div id="crecer"></div>
-        <h4>¿Por qué todo <p> se ve tan pequeño?</h4>
+        <h4>¿Por qué todo se ve tan pequeño?</h4>
     </div>
 
     <div class="slides slide3">
-        <h4>Te has hecho muy grande para salir...</h4>
-        <a href="index5">Beber antídoto</a>
+        <h3><p>Te has hecho muy grande para salir por la puerta...</h3>
+        <a href="index5">¿Deberías beber de la botella?</a>
     </div>
 
     <header>
