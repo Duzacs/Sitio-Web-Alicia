@@ -183,15 +183,34 @@
             left: 41%; /* Centra horizontalmente el texto */
         }
 
+        .audio-player{
+            position: absolute;
+            margin-top: 10px;
+            left: 40%;
+            opacity: 10%;
+            z-index: 30;
+        }
+
+
     </style>
 </head>
 <body>
     <div id="contenedor">
 
+
+
         <div class="slides slide1">
+
+            <div class="audio-player">
+            <audio controls>
+            <source src="audio/fondo1.mp3" type="audio/mp3">
+            </audio>
+            </div>  
+           
             <div id="comer"></div>
             <img src="img/index4/slide1.png" alt="Slide 1">
             <h2>Probemos...</h2>
+
         </div>
 
         <div class="slides slide2">
