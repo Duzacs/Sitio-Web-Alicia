@@ -5,51 +5,36 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Alicia Interactivo</title>
-
+    <link rel="shortcut icon" href="img/favicon.png">
     <!-- Fuente -->
     <link href='https://fonts.googleapis.com/css?family=Alice' rel='stylesheet'>
 
     <style>
-        /* Estilos texto */
-        h1, h2, p, body, header {
-            font-family: 'Alice';
-            margin: 0px;}
-        }
-
-        h1{
-            font-size: 60px;
-        }
-
-
-
         /* Estilos para el cuerpo del documento */
-        body {
-
-            height: 100vh;
+        html, body {
             width: 100%;
+            height: 100vh;
             display: flex;
             flex-direction: column;
-            margin: 0;
-        }
+            min-height: 100vh;
+            margin: 0; 
+            font-family: 'Alice', sans-serif;
+        } 
 
         /* Estilos para el contenedor */
         #contenedor {
-
             position: relative;
             overflow-y: scroll;
-           
             scroll-behavior: smooth;
         }
 
         /* Estilos para los recuadros de la escena */
         .recuadros {
-
             display: flex;
             height: 100vh;
             color: white;
             scroll-snap-align: start;
             text-align: right;
-
         }
 
         .recuadro1 {
@@ -57,131 +42,46 @@
             display: flex;
             flex-direction: column;
         }
-        .recuadro1 h1{
-            margin-right: 150px;
-            margin-top: 200px;
-            flex-direction: column;
+
+        .img-1 {
+            width: 1280px;
+            height: 720px;
+            position: relative;
+            top: 30px;
+            left: 100px;
+            animation: shrinkImage 1s forwards; /* Agregamos la animación a la imagen */
         }
 
-        .recuadro1 p{
-            margin-right: 150px;
-            margin-top: 8px;
+
+        @keyframes shrinkImage {
+            from {
+                transform: scale(1); /* Tamaño original */
+            }
+            to {
+                transform: scale(0.5); /* Tamaño más pequeño */
+            }
         }
 
 
         .recuadro2 {
             background: linear-gradient(0deg, #91D198, #7068C6);
             flex-direction: column;
-            height: 100px;
+        }
+
+        .img-2 {
+            width: 640px;
+            height: 360px;
+            position: relative;
+            top: 350px;
+            right: 10px;
         }
 
         .recuadro3 {
             background: linear-gradient(0deg, #91D198, #B5DBEF, #91D198);
             flex-direction: column;
-            background-image: url(img/index2/fondos-arboles.png);
-            background-size: contain;
-            background-repeat: no-repeat;
-            /*background-image: url(img/index2/fondos-alicia.png); no se si dejarlo en capas*/
-        }
-      
-
-        .recuadro4 {
-            background: linear-gradient(0deg, #91D198, #B5DBEF, #91D198);
-            flex-direction: column;
-            height: 2080px;
-            width: 1920px;
-            background-image:url(img/index2/fondos-tunel.png);
-      
-            background-repeat: no-repeat;
         }
 
-
-        /* Estilos para elementos de fondo / entidades */
-
-
-        /* Estilos para las animaciones */
-        .recuadro-animacion{
-            height: 1000px;
-            display: flex;
-            margin-top: -150px;
-            margin-bottom: 100px;
-           
-            }
-
-        .animacion-alicia-pesta{
-        width: 1000px;
-        height: 600px;
-        background-image: url(img/index2/animacion-alicia-1.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        animation: pesta 1s infinite;
-        }
-
-        .animacion-alicia-caida{
-        width: 1920px;
-        height: 2080px;
-        background-image: url(img/index2/animacion-caida.png); 
-        background-repeat: no-repeat;
-        animation: caida 18s infinite;
-
-        }
-
-
-        .recuadro-animacion{
-
-        }
-
-        /* Animación cambio de frames */
-
-        @keyframes pesta{
-            0%, 100%{
-                background-image: url('img/index2/animacion-alicia-1.png');
-            }
-            50%{
-                 background-image: url('img/index2/animacion-alicia-2.png');
-            }
-        }
-
-        .recuadro-animacion{
-        }
-
-        /* Animación cambio de frames */
-
-        @keyframes caida{
-            from{
-                background-position-y: -900px;
-            }to{
-                 background-position-y: 2100px;
-            }
-        }
-
-        /* fade in del texto
-        tut: https://alvarotrigo.com/blog/css-text-animations/ */
-
-        .lineup{
-              animation: 2s anim-lineUp ease-out infinite;
-              animation-iteration-count: 1;
-
-        }
-        @keyframes anim-lineUp {
-        0% {
-         opacity: 0;
-        transform: translateY(80%);
-         }
-        20% {
-         opacity: 0;
-        }
-         50% {
-         opacity: 1;
-        transform: translateY(0%);
-        }
-        100% {
-      opacity: 1;
-        transform: translateY(0%);
-            }
-        }
-        /* Estilos para el header y el footer */
-
+        /* Estilos para el footer */
         footer {
             background-color: whitesmoke;
             padding: 20px;
@@ -199,42 +99,21 @@
 
         <!-- Primera escena, Alicia con botellita-->
         <div class="recuadros recuadro1">
-            <div class="lineup">
-            <p>Scroll para beber</p>
-            </div>
-          
-
-        </div>
-
-        <!-- Transicion-->
-        <div class="recuadros recuadro2">
-            <h2></h2>
+            <img class="img-1" src="img/index5/alicia-normal.png">
         </div>
 
         <!-- Escena 2, chiquita-->
-        <div class="recuadros recuadro3">
-          <div class="lineup">
-            <h2> Te hiciste chiquita! </h2>
-          </div>
+        <div class="recuadros recuadro2" style="background-image: url(img/index5/fondo.png);">
+            <img class="img-2" src="img/index5/alicia-chiquita.png">
+            <h2>Te has hecho chiquita! lol</h2>
+
         </div>
 
         <!-- Escena 3, end-->
         <div class="recuadros recuadro4">
-            <div class="lineup">
-            <h2> Ahora cabes por la puerta </h2>
-              <p> Click para salir</p>
-          </div>
-           
-           <a href="index6.html"> <img src="img/index5/puerta.png"> </a>
-            
-            </div>
-
-
-            
-
         </div>
-
-         </div> <!-- Cierre contenido de los frames-->
+           
+    </div> <!-- Cierre contenido de los frames-->
 
     <footer>
         <!-- Botones en el footer -->
@@ -242,6 +121,9 @@
         <a href="index2.html">Sección 2</a>
         <a href="index3.html">Sección 3</a>
         <a href="index4.html">Sección 4</a>
+        <a href="index5.html">Sección 5</a>
+        <a href="index6.html">Sección 6</a>
+
     </footer>
 
 <!-- Scripts, enlaces a librerías JS, etc. -->
