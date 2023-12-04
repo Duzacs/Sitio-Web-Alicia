@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 
@@ -43,11 +45,17 @@
             flex-direction: column;
         }
 
+        .recuadro1 h2{
+        	font-size:60px;
+        	margin-top: 100px;
+        	margin-right: 730px;
+        }
+
         .img-1 {
             width: 1280px;
             height: 720px;
             position: relative;
-            top: 30px;
+            margin-top: -160px;
             left: 100px;
             animation: shrinkImage 1s forwards; /* Agregamos la animación a la imagen */
         }
@@ -68,6 +76,15 @@
             flex-direction: column;
         }
 
+        .recuadro2 h2{
+        	margin-right: 800px;
+        	margin-top: -50px;
+        }
+
+        .recuadro2 p{
+        	margin-right: 820px;
+        	margin-top: -15px;
+        }
         .img-2 {
             width: 640px;
             height: 360px;
@@ -77,16 +94,41 @@
         }
 
         .recuadro3 {
+        	width: 100vw;
+        	height: 1080px;
+        	background-image: url(img/index5/puerta.png) ;
+        	background-size: cover;
+        	background-repeat: no-repeat;
             background: linear-gradient(0deg, #91D198, #B5DBEF, #91D198);
             flex-direction: column;
         }
 
+        .recuadro3 a{
+        	font-size: 30px;
+        	margin-top: 700px;
+        	margin-right: 1200px;
+        	color: #ffb5d3;
+        }
+
+
         /* Estilos para el footer */
         footer {
-            background-color: whitesmoke;
-            padding: 20px;
+            padding: 19px;
             text-align: center;
-            position: relative;
+            position: absolute;
+            bottom: 0;
+            display:flex;
+            margin-left: 510px;
+        }
+
+        footer a {
+            color: #ffb5d3; 
+             margin: 0 10px;
+             text-align: center;
+            }
+
+        .audio-player{
+            opacity: 10%;
         }
 
     </style>
@@ -99,30 +141,38 @@
 
         <!-- Primera escena, Alicia con botellita-->
         <div class="recuadros recuadro1">
+        	<div class="audio-player">
+            <audio controls>
+            <source src="audio/<fondo5.mp3" type="audio/mp3">
+            </audio>
+            </div>   
+        	<h2> ¡Oh! </h2>
             <img class="img-1" src="img/index5/alicia-normal.png">
         </div>
 
         <!-- Escena 2, chiquita-->
         <div class="recuadros recuadro2" style="background-image: url(img/index5/fondo.png);">
             <img class="img-2" src="img/index5/alicia-chiquita.png">
-            <h2>Te has hecho chiquita! lol</h2>
+            <h2> ¡Te has hecho chiquita! </h2>
+            <p> Ahora pasas por la puerta...</p>
 
         </div>
 
         <!-- Escena 3, end-->
-        <div class="recuadros recuadro4">
+        <div class="recuadros recuadro3" style="background-image: url(img/index5/puerta.png)">
+        	<a href="index6.html"><h2> ¡Haz click!</h2></a>
+        	
         </div>
            
     </div> <!-- Cierre contenido de los frames-->
 
     <footer>
         <!-- Botones en el footer -->
-        <a href="index.html">Sección 1</a>
-        <a href="index2.html">Sección 2</a>
-        <a href="index3.html">Sección 3</a>
-        <a href="index4.html">Sección 4</a>
-        <a href="index5.html">Sección 5</a>
-        <a href="index6.html">Sección 6</a>
+        <a href="index.html">Capítulo 1</a>
+        <a href="index2.html">Capítulo 2</a>
+        <a href="index3.html">Capítulo 3</a>
+        <a href="index4.html">Capítulo 4</a>
+        <a href="index4.html">Capítulo 5</a>
 
     </footer>
 
