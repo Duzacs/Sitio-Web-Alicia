@@ -40,18 +40,18 @@
             position: relative;
         }
 
-        /*Estilos para slide 1*/
+/*Estilos para slide 1*/
 
         /* Estilos para el contenedor del personaje */
         #comer{
             width: 600px; /* Ajusta el tamaño del personaje según sea necesario */
-            height: 600;
+            height: 600px;
             position: absolute;
-            top: 10px;
-            margin-right: 40px;
+            top: 0px;
+            right: 290px;
             z-index: 1; /* Asegura que el personaje esté encima del fondo */
             background-image: url('img/index4/Come2.png');
-            background-size: contain;
+            background-size: cover;
             background-repeat: no-repeat;
             animation: comer 3s steps(1) infinite; /* Usas 'comer' para animar #personaje */
         }
@@ -71,12 +71,12 @@
         #crecer{
             width: 420px;
             height: 420px;
-            top: 10px;
-            right: 40px;
             z-index: 1; /* Asegura que el personaje esté encima del fondo */
+            transform: translateX(100px)
             transition: transform 1s ease-in-out;
             background-image: url('img/index4/Crece.png');
-            background-size: contain;
+            margin-right: 100px;
+            background-size: cover;
             background-repeat: no-repeat;
             animation: agrandar 8s forwards; /* Aplica la animación automáticamente al cargar la página */
         }
@@ -94,8 +94,8 @@
             width: 100%;
             height: 100vh;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            /*align-items: center;
+            justify-content: center; */
             gap: 50px;
             color: white;
             scroll-snap-align: start;
@@ -131,19 +131,7 @@
         .slides.slide3 a:hover {
             color: #7C28CB; /* Cambia el color del texto al pasar el cursor sobre los enlaces */
             display: inline-block; /* Hace que los enlaces sean elementos en línea con bloque */
-        }
-        .slides.slide3 a:nth-child(1) {
-            float: left; /* Coloca el primer enlace a la izquierda */
-            margin-left: 80px; /* Añade un margen a la derecha para separar los enlaces */
-            margin-bottom: 400px;
-        }
-
-        .slides.slide3 h4:nth-child(2) {
-            float: right; /* Coloca el segundo enlace a la derecha */
-            margin-right: -40px; /* Añade un margen a la izquierda para separar los enlaces */
-            margin-top: -400px;
-        }
-
+       
     </style>
 </head>
 <body>
