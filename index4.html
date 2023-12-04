@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,21 +30,29 @@
         }
 
         /* Estilos para el footer */
-        footer {
-            background-color: whitesmoke;
-            padding: 20px;
-            text-align: center;
-            position: relative;
+       footer {
+            z-index: 10;
+            padding: 19px;
+            position: absolute;
+            bottom: 0;
+            display:flex;
+            left: 35%;
+            text-shadow: 1px 1px #7c28cb;
         }
 
+        footer a {
+            color: #ffb5d3; 
+             margin: 0 10px;
+            }
+
         /*Estilos para slide 1*/
-        #comer{
+        #comer {
             width: 600px; /* Ajusta el tamaño del personaje según sea necesario */
             height: 600px;
             top: 155px;
             right: 400px;
             position: absolute;
-            z-index: 1; /* Asegura que el personaje esté encima del fondo */
+            z-index: 2; /* Asegura que el personaje esté encima del fondo y el gradiente */
             background-image: url('img/index4/Come2.png');
             background-size: cover;
             background-repeat: no-repeat;
@@ -64,13 +72,13 @@
         /* Estilos para el slide 2 */
         #crecer {
             background-image: url('img/index4/Crece.png');
+            position: absolute;
             width: 300px;
+            margin-top: 300px;
             height: 300px;
-            right: 200px;
-            z-index: 1;
+            right: 600px;
+            z-index: 5;
             transform: translateX(750px);
-            margin-left: 600px;
-            margin-top: 250px;
             transition: transform 1s ease-in-out;
             background-size: cover;
             background-repeat: no-repeat;
@@ -85,7 +93,9 @@
             font-family: 'Alice';
             font-size: 140px;
             font-weight: 30px;
-            text-align: center; /* Centra el texto horizontalmente */
+            text-align: center;
+            position: relative;
+            z-index: 2; /* Asegura que el texto esté encima del fondo y el gradiente */
         }
 
         @keyframes agrandar {
@@ -97,103 +107,116 @@
             }
         }
 
-        .slides{
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        gap: 50px;
-        color: whitesmoke;
-        scroll-snap-align: start;
-        text-align: center; /* Centra el texto horizontalmente */
-        }
-
-        .slides img{
-            width: 350px;
-        }
-
-        .slides h2, {
-            font-family:'Alice';
-            font-size: 50px;
-            font-weight: 30px;
-            position: absolute;
-            left: 20px;
-       }
-
-        .slide1{
-            background: linear-gradient(180deg, #0C0152, #100228);
-        }
-
-        .slide2{
-            background: linear-gradient(180deg, #100228, #FFB5D4);
-            background-image: url('img/img-3/fondo_tres.png');
-        }
-
-        .slide3{
-            background: linear-gradient(180deg, #FFB5D4, #BE95E4);
-        }
-
-        .slides.slide3 {
+        .slides {
+            width: 100%;
+            height: 100vh;
             display: flex;
-            flex-direction: column;
-            align-items: center; /* Centra el contenido horizontalmente */
+            gap: 50px;
+            color: whitesmoke;
+            scroll-snap-align: start;
+            text-align: center;
+            position: relative; /* Asegura que el gradiente se superponga correctamente a la imagen */
         }
-        .slides.slide3 a {
-            margin-top: 0px; /* Ajusta este valor según sea necesario para cambiar la distancia desde el párrafo */
-            padding: 10px 20px; /* Ajusta el relleno según sea necesario */
-            color: white; /* Ajusta el color del texto según sea necesario */
-        }
-        .slides.slide3 a:hover {
-            display: inline-block; /* Hace que los enlaces sean elementos en línea con bloque */
-        }
-        .slides.slide3 h3 {
-            margin-bottom: 10px; 
 
-        .audio-player{
-            opacity: 10%;
+        .slides img {
+            width: 100%; /* Ajusta el ancho de la imagen para que ocupe todo el contenedor */
+            height: auto; /* Mantiene la proporción de la imagen */
+            position: relative; /* Asegurar que la imagen esté encima del gradiente */
+            z-index: 1; /* Asegurar que la imagen esté encima del gradiente */
         }
+
+        .slide3::before {
+            content: ""; /* Crea un pseudo-elemento para el gradiente */
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 0; /* Detrás de la imagen */
+            background: radial-gradient(#BFDCEA 0%, #B47DE7 20%, #7c28cb 40%, #5604A4 60%);
         }
-       
+
+
+        .slide2::before {
+            content: ""; /* Crea un pseudo-elemento para el gradiente */
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 0; /* Detrás de la imagen */
+            background: linear-gradient(#BFDCEA 50%,  #5604A4);
+        }
+        /* Estilos específicos para cada slide */
+        .slide1 h2,
+        .slide2 h2,
+        .slide3 h3 {
+            font-family: 'Alice';
+            position: absolute; /* Posiciona el texto de manera absoluta sobre la imagen */
+            z-index: 2; /* Asegura que el texto esté encima del fondo y el gradiente */
+        }
+        .slide3 h3 {
+            font-size: 20px;
+            top: 300px; /* Centra verticalmente el texto */
+           left: 550px;; /* Centra horizontalmente el texto */
+        }
+
+        .slide3 a {
+            font-family:'Alice';
+            font-size: 30;
+            color: white;
+            z-index: 4;
+            position: absolute;
+            font-size: 25px;
+            top: 370px; /* Centra verticalmente el texto */
+            left: 600px; /* Centra horizontalmente el texto */
+        }
+
+        .slide2 h2 {
+            top: 10%;
+            left: 40%;
+        }
+
+        .slide1 h2 {
+            font-size: 50px;
+            top: 10%; /* Centra verticalmente el texto */
+            left: 41%; /* Centra horizontalmente el texto */
+        }
+
     </style>
 </head>
 <body>
-<div id="contenedor">
+    <div id="contenedor">
 
-    <div class="slides slide1">
-        <div class="audio-player">
-            <audio controls>
-            <source src="audio/fondo4.mp3" type="audio/mp3">
-            </audio>
-            </div>
-        <div id="comer"></div>
+        <div class="slides slide1">
+            <div id="comer"></div>
+            <img src="img/index4/slide1.png" alt="Slide 1">
+            <h2>Probemos...</h2>
+        </div>
+
+        <div class="slides slide2">
+            <div id="crecer"></div>
+            <h2>¿Por qué todo se ve tan pequeño?</h2>
+            <img src="img/index4/slide2.png" alt="Slide 2">
+        </div>
+
+        <div class="slides slide3">
+            <h3><p>Te has hecho muy grande para salir por la puerta...</h3>
+            <a href="index5">¿Deberías beber de la botella?</a>
+            <img src="img/index4/slide3.png" alt="Slide 3">
+        </div>
+
+
+        <!-- ... (otros slides si los hay) ... -->
     </div>
-
-    <div class="slides slide2">
-        <div id="crecer"></div>
-        <h2>¿Por qué todo se ve tan pequeño?</h2>
-    </div>
-
-    <div class="slides slide3">
-        <h3><p>Te has hecho muy grande para salir por la puerta...</h3>
-        <a href="index5">¿Deberías beber de la botella?</a>
-    </div>
-
-    <header>
-        <!-- Contenido del encabezado si es necesario -->
-    </header>
-
-</div>
-
-
-<footer>
-    <!-- Botones en el footer -->
-    <a href="index.html">Capítulo 1</a>
+        <footer>
+        <a href="index.html">Capítulo 1</a>
         <a href="index2.html">Capítulo 2</a>
         <a href="index3.html">Capítulo 3</a>
         <a href="index4.html">Capítulo 4</a>
         <a href="index4.html">Capítulo 5</a>
-</footer>
+    </footer>
 
-<!-- Scripts, enlaces a librerías JS, etc. -->
-
+    <!-- Scripts, enlaces a librerías JS, etc. -->
 </body>
 </html>
