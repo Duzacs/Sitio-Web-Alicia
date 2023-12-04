@@ -14,6 +14,7 @@
     <link rel="shortcut icon" href="img/favicon.png">
 
     <style>
+
         /* Estilos texto */
         h1, h2, p, body, header {
             font-family: 'Alice';
@@ -60,7 +61,7 @@
         }
 
         .recuadro1 {
-            background: linear-gradient(0deg, #7c28cb 20%, #ffb5d3);
+            background: radial-gradient(#BFDCEA 0%, #B47DE7 20%, #7c28cb 40%, #5604A4 60%);
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -163,6 +164,25 @@
             animation: mirar 3s infinite;
         }
 
+
+        .recuadro2 h2, .recuadro3 h2 {
+            margin-top: 2100px;
+            position: absolute;
+            font-size: 30px;
+            z-index: 30;
+            text-align: center;
+            z-index: 999; /* Valor alto para asegurar que esté sobre otros elementos */
+            }
+
+        .recuadro3 h2 {
+            color: #7c28cb;
+            }
+
+
+        .recuadro2 h2 {
+            color: #ffb5d3; 
+            }
+
         /* Animación cambio de frames */
 
         @keyframes mirar{
@@ -202,16 +222,10 @@
 
         @keyframes conejoasomandose{
             0%{
-                transform:translateX(0px);
+                transform:translateY(70px);
             }
             100%{
-                transform:translateX(-10px);
-            }
-            0%{
-                transform:translateY(-70px);
-            }
-            0%{
-                transform:translateY(10px);
+                transform:translateY(-30px);
             }
         }
 
@@ -405,6 +419,7 @@
                 <img src="img/index1/recuadro2-conejo.png"class="recuadro2-conejo">
                 <img src="img/index1/recuadro2-capa2.png"class="recuadro2-capa2">
                 <img src="img/index1/recuadro2-capa3.png" class="recuadro2-capa3">
+                <h2>¿Qué es ese ruido? Como si unas hojas se estuvieran moviendo...</h2>
         </div>
 
         <div class="recuadros recuadro3">
@@ -414,7 +429,8 @@
                 <img src="img/index1/recuadro3-capa1.png"class="recuadro3-capa1">
                 <img src="img/index1/recuadro3-capa3.png" class="recuadro3-capa3">
                 <img src="img/index1/recuadro2-alicia.png"class="recuadro2-alicia">
-            
+                <h2>¡Un conejo ha saltado! ¿Por qué me mira tan fijamente?</h2>
+             
         </div>
             <div class="recuadros recuadro4">
                 <img src="img/index1/recuadro4-capa1.png" class="recuadro4-capa1">
@@ -423,7 +439,7 @@
                 <div class="animacion-conejo-caminata"></div>
             </div>
             <div class="gradientedivisor"></div>
-            <div class="continuacion"><a href="index2.html">Sigue al conejo...</a>
+            <div class="continuacion"><a href="index2.html">Sigue al conejo... ₍ᐢ. .ᐢ₎</a>
             </div>
             
         <footer>
