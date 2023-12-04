@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Alicia Interactivo</title>
+    <link rel="shortcut icon" href="img/favicon.png">
 
     <!-- Fuente -->
     <link href='https://fonts.googleapis.com/css?family=Alice' rel='stylesheet'>
@@ -31,10 +32,11 @@
 
         /* Estilos para el footer */
         footer {
-            background-color: whitesmoke;
+            background-color: rgba(255,255,255,0.3);
             padding: 20px;
             text-align: center;
             position: relative;
+            opacity: 0.5;
         }
 
         /* Estilos para el slide 1 */
@@ -98,7 +100,7 @@
             top: 50px;
             left: 30px;
             position: relative;
-            background-image: url('img/img-3/elije-1.png'); /* Imagen inicial con los ojos cerrados */
+            background-image: url('img/index3/elije-1.png'); /* Imagen inicial con los ojos cerrados */
             background-size: contain;
             background-repeat: no-repeat;
             animation: elije-animation 0.8s steps(1) infinite; /* Cambias 'pestañeo' a 'elije-animation' */
@@ -107,10 +109,10 @@
         /* Definición de la animación para #elije */
         @keyframes elije-animation {
             0%, 100% {
-                background-image: url('img/img-3/elije-1.png');
+                background-image: url('img/index3/elije-1.png');
             }
             50% {
-                background-image: url('img/img-3/elije-2.png');
+                background-image: url('img/index3/elije-2.png');
             }
         }
 
@@ -139,7 +141,7 @@
         }
 
 
-        img[src="img/img-3/arrow-down.png"] {
+        img[src="img/index3/arrow-down.png"] {
             /* Cambia el tamaño de la imagen */
             width: 100px; 
             height: auto; /* Mantener la proporción */
@@ -183,21 +185,21 @@
 <body>
 <div id="contenedor">
 
-    <div class="slides slide1" style="background-image: url('img/img-3/fondo_uno.png');">
+    <div class="slides slide1" style="background-image: url('img/index3/fondo_uno.png');">
         <div id="img-personaje">
-            <img class="img-1" src="img/img-3/acostada-1.png">
-            <img class="img-2" src="img/img-3/acostada-2.png">
-            <img class="img-3" src="img/img-3/acostada-3.png">
+            <img class="img-1" src="img/index3/acostada-1.png">
+            <img class="img-2" src="img/index3/acostada-2.png">
+            <img class="img-3" src="img/index3/acostada-3.png">
         </div>
     </div>
 
 
     <div class="slides slide2">
          <div id="elije"></div>
-        <img src="img/img-3/arrow-down.png">
+        <img src="img/index3/arrow-down.png">
     </div>
 
-    <div class="slides slide3" style="background-image: url('img/img-3/fondo_tres.png');">
+    <div class="slides slide3" style="background-image: url('img/index3/fondo_tres.png');">
         <a href="index2">Beber</a>
         <a href="index4">Comer</a>
     </div>
@@ -213,10 +215,10 @@
 
 <footer>
     <!-- Botones en el footer -->
-    <a href="index.html">Capítulo 1</a>
-    <a href="index2.html">Capítulo 2</a>
-    <a href="index3.html">Capítulo 3</a>
-    <a href="index4.html">Capítulo 4</a>
+    <a href="index.html">Sección 1</a>
+    <a href="index2.html">Sección 2</a>
+    <a href="index3.html">Sección 3</a>
+    <a href="index4.html">Sección 4</a>
 </footer>
 
 <!-- Scripts, enlaces a librerías JS, etc. -->
