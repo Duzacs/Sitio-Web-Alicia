@@ -221,8 +221,6 @@
         }
 
         @keyframes conejoasomandose{
-
-            }
             0%{
                 transform:translateY(70px);
             }
@@ -272,6 +270,7 @@
         /* Estilos imagenes composicion recuadros */
 
        .bg-1{ 
+        pointer-events: none;
         position: absolute; 
         z-index: 0; 
         width: 100%;
@@ -281,6 +280,7 @@
         } 
 
         .bg-2{ 
+        pointer-events: none;
         position: absolute; 
         z-index: 1; 
         width: 100%;
@@ -378,7 +378,8 @@
         /* Estilos para el reproductor*/
 
         .audio-player{
-            opacity: 10%;
+            margin-bottom: 700px;
+            opacity: 50%;
             z-index: 30;
         }
 
@@ -394,6 +395,13 @@
 
         <!-- Primera vista de la página, título y nombres-->
         <div class="recuadros recuadro1">
+
+                        <div class="audio-player">
+            <audio controls>
+            <source src="audio/fondo1.mp3" type="audio/mp3">
+            </audio>
+            </div>   
+
             <img src="img/index1/bg-2.png"class="bg-2">
             <img src="img/index1/bg-1.png"class="bg-1">
 
@@ -402,13 +410,6 @@
             <h2>✧ Una novela gráfica ✧</h2>
             <p>Dominique Beriestain | Nayarit Betancourt | Daniela Brito</p>
             <p>Fernanda Caniullan | Emil Gatica | Dusan Ivelic</p>
-
-
-            <div class="audio-player">
-            <audio controls>
-            <source src="audio/<fondo1.mp3" type="audio/mp3">
-            </audio>
-            </div>   
 
                 </div>
 
@@ -451,7 +452,6 @@
         <a href="index2.html">Capítulo 2</a>
         <a href="index3.html">Capítulo 3</a>
         <a href="index4.html">Capítulo 4</a>
-        <a href="index5.html">Capítulo 5</a>
         </footer>
 
         </div>
