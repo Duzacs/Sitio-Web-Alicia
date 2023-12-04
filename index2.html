@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Alicia Interactivo</title>
 
+    <link rel="shortcut icon" href="img/favicon.png">
+
     <!-- Fuente -->
     <link href='https://fonts.googleapis.com/css?family=Alice' rel='stylesheet'>
 
@@ -17,7 +19,7 @@
         }
 
         h1{
-            font-size: 60px;
+            font-size: 100px;
         }
 
 
@@ -33,16 +35,13 @@
 
         /* Estilos para el contenedor */
         #contenedor {
-
             position: relative;
             overflow-y: scroll;
-           
             scroll-behavior: smooth;
         }
 
         /* Estilos para los recuadros de la escena */
         .recuadros {
-
             display: flex;
             height: 100vh;
             color: white;
@@ -58,23 +57,19 @@
             flex-direction: column;
         }
         .recuadro1 h1{
-            margin-right: 150px;
+            margin-right: 250px;
             margin-top: 200px;
             flex-direction: column;
         }
 
         .recuadro1 p{
-            margin-right: 150px;
+            margin-right: 250px;
             margin-top: 8px;
         } 
-
-/*  */
-      
 
         .recuadro2 {
             width: 1920px;
             height: 1800px;
-            z-index: -10;
         }
 
         .recuadro2 img{
@@ -86,22 +81,22 @@
         }
 
         .recuadro3 {
-            background: linear-gradient(0deg, #91D198, #B5DBEF, #91D198);
             flex-direction: column;
             height: 2080px;
             width: 1920px;
-            background-image:url(img/index2/fondos-tunel-2.png);
+            background-image: url(img/index2/fondos-tunel.png);
             background-size: contain;
             background-repeat: no-repeat;
-            z-index: -10;
         }
 
-        .recuadro3 img{
-            z-index: 10;
+        .recuadro3 p{
+        position: absolute;
+        font-size: 30px;
+        margin-top: 1900px;  
+        margin-left: 930px;
+       color: #ffb5d3;
+       z-index: 1;
         }
-
-        /* Estilos para elementos de fondo / entidades */
-
 
         /* Estilos para las animaciones */
         .recuadro-animacion{
@@ -109,7 +104,6 @@
             display: flex;
             margin-top: -150px;
             margin-bottom: 100px;
-           
         }
 
         .animacion-alicia-pesta{
@@ -122,17 +116,17 @@
         }
 
         .animacion-alicia-caida{
+        
         width: 1920px;
         height: 2080px;
         background-image: url(img/index2/animacion-caida.png); 
         background-repeat: no-repeat;
         animation: caida 18s infinite;
-
+        z-index: 20;
         }
 
 
         .recuadro-animacion{
-
         }
 
         /* Animación cambio de frames */
@@ -189,10 +183,23 @@
 
         /* Estilos para  el footer */
         footer {
-            background-color: whitesmoke;
-            padding: 20px;
+            padding: 19px;
             text-align: center;
-            position: relative;
+            position: absolute;
+            bottom: 0;
+            display:flex;
+          
+            margin-left: 750px;
+        }
+
+        footer a {
+            color: #ffb5d3; 
+             margin: 0 10px;
+             text-align: center;
+            }
+
+        .audio-player{
+            opacity: 10%;
         }
 
     </style>
@@ -203,9 +210,18 @@
 
     <div id="contenedor">
 
-        <!-- Primera escena, alicia-->
+       
+        <!-- Primera escena, alicia--> 
+
+        <!--audio de fondo-->
         <div class="recuadros recuadro1">
-            <div class="lineup">
+            <div class="audio-player">
+            <audio controls>
+            <source src="audio/<fondo2.mp3" type="audio/mp3">
+            </audio>
+            </div>   
+
+         <div class="lineup">
                 <h1>¿Qué hago?</h1>
                 <p>Scroll para ir al agujero</p>
             </div>
@@ -217,12 +233,13 @@
 
         <!-- Escena 2, se asoma-->
         <div class="recuadros recuadro2" style="background-image: url(img/index2/fondos-arboles.png);">
-            <h2>Lorem Ipsum</h2>
+            
             <img src="img/index2/alicia-agachada.png">
         </div>
 
         <!-- Escena 3, tunel-->
-        <div class="recuadros recuadro3" style="background-image2: url(img/index2/fondos-tunel-1.png);">
+        <div class="recuadros recuadro3" style="background-image2: url(img/index2/fondos-tunel.png);">
+           <a href="index3.html"><p> ¡Has caído!</p></a> 
             <div class="recuadro-animacion2">
                 <div class="animacion-alicia-caida"></div> <!-- caida alicia-->
             </div>
@@ -232,15 +249,16 @@
 
     <footer>
         <!-- Botones en el footer -->
-        <a href="index.html">Sección 1</a>
-        <a href="index2.html">Sección 2</a>
-        <a href="index3.html">Sección 3</a>
-        <a href="index4.html">Sección 4</a>
+        <a href="index.html">Capítulo 1</a>
+        <a href="index2.html">Capítulo 2</a>
+        <a href="index3.html">Capítulo 3</a>
+        <a href="index4.html">Capítulo 4</a>
+        <a href="index4.html">Capítulo 5</a>
     </footer>
 
 <!-- Scripts, enlaces a librerías JS, etc. -->
 
-<img src="">
+
 
 </body>
 
